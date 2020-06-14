@@ -1,16 +1,35 @@
 import React from 'react';
-import styled from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
 
-const Wrapper = styled.div`
-  background-color: magenta;
-`
+
+// -------------------------------------------------------- //
+//                          Main App                        //
+// -------------------------------------------------------- //
 
 function App() {
   return (
-    <Wrapper>
+    <React.Fragment>
+      <GlobalStyle />
       Hello World
-    </Wrapper>
+    </React.Fragment>
   );
 }
+
+// -------------------------------------------------------- //
+//                           Styles                         //
+// -------------------------------------------------------- //
+
+const GlobalStyle = createGlobalStyle`
+  html {
+    height: 100%
+  }
+  body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+  }
+`
 
 export default App;
