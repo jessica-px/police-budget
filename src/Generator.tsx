@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styled, { css } from 'styled-components'
+import { PieChart } from 'react-minimal-pie-chart';
 
 // DUMMY DATA
 const dummyCity = {
@@ -16,6 +17,21 @@ const dummyCity = {
     }
   ]
 }
+
+const generateChartData = (policePercent: number, altPercent: number) => {
+  const general = 100 - policePercent - altPercent;
+  return [
+    { title: 'General', value: general, color: '#444' },
+    { title: 'Police', value: policePercent, color: 'red' },
+    { title: 'Alternative', value: altPercent, color: 'yellow' }
+  ]
+}
+
+const defaultLabelStyle = {
+  fontSize: '5px',
+  fontFamily: 'sans-serif',
+};
+
 
 // -------------------------------------------------------- //
 //                       Main Component                     //
@@ -39,10 +55,15 @@ export const Generator = () => {
       </HeadlineWrapper>
       <AlternativeNumber>{alternativeAmount}</AlternativeNumber>
       <AlternativeDropdown>{alternative.name}</AlternativeDropdown>
-      <div>
-        Instead, {city.name}'s spending looks like this:
-      </div>
+      <CenteredText>
+        Instead, city spending looks like this:
+      </CenteredText>
       <BudgetComparison city={city} alternative={alternative} />
+      <Chart
+        policePercent={46}
+        altPercent={3}
+      />
+      <DefundMessage>Tell {city.name} to <strong>#defundthepolice</strong>.</DefundMessage>
     </PageWrapper>
   )
 }
@@ -71,6 +92,7 @@ interface BudgetComparisonProps {
   alternative: Alternative
 }
 
+
 const BudgetComparison = ({city, alternative}: BudgetComparisonProps) => (
   <BudgetComparisonWrapper>
     <BudgetSection
@@ -97,12 +119,29 @@ interface BudgetSectionProps {
 
 const BudgetSection = ({name, budget, generalFund, type}: BudgetSectionProps) => (
   <BudgetSectionStyle type={type}>
-    <WhiteText>{name}:</WhiteText>
+    <BudgetPercent>{findPercent(budget, generalFund)}%</BudgetPercent>
+    <BudgetLabel>&nbsp;{name}</BudgetLabel>
     <BoldText>{numToWord(budget)}</BoldText>
-    <SmallText>{findPercent(budget, generalFund)}%</SmallText>
   </BudgetSectionStyle>
 )
 
+interface ChartProps {
+  policePercent: number,
+  altPercent: number
+}
+
+const Chart = ({policePercent, altPercent}: ChartProps) => (
+  <ChartWrapper>
+    <PieChart
+      data={generateChartData(policePercent, altPercent)}
+      startAngle={270}
+      labelStyle={{
+        ...defaultLabelStyle,
+      }}
+      lineWidth={40}
+    />
+  </ChartWrapper>
+)
 
 // -------------------------------------------------------- //
 //                           Helpers                        //
@@ -142,14 +181,15 @@ const numToWord = (number: number): string => {
 // -------------------------------------------------------- //
 
 const PageWrapper = styled.div`
-  margin: 20px;
+  margin: 30px;
   margin-top: 40px;
 `
 
 const HeadlineWrapper = styled.div`
   font-size: 18px;
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
+  font-weight: 600;
 `
 
 const CityDropdown = styled.span`
@@ -164,13 +204,14 @@ const HeadlinePolice = styled.span`
 const AlternativeNumber = styled.div`
   text-align: center;
   color: yellow;
-  font-size: 36px;
+  font-size: 38px;
+  font-weight: 800;
 `
 
 const AlternativeDropdown = styled.div`
   color: yellow;
-  text-decoration: underline;
-  font-weight: 600;
+  font-weight: 800;
+  font-size: 22px;
   text-align: center;
   margin-bottom: 25px;
 `
@@ -181,16 +222,22 @@ const BudgetComparisonWrapper = styled.div`
   margin-top: 30px;
 `
 
-const WhiteText = styled.div`
-  color: white;
+const CenteredText = styled.div`
+  text-align: center;
 `
 
 const BoldText = styled.div`
+  font-size: 14px;
+`
+
+const BudgetLabel = styled.span`
+  font-size: 15px;
   font-weight: 600;
 `
 
-const SmallText = styled.div`
-  font-size: 14px;
+const BudgetPercent = styled.span`
+  font-size: 20px;
+  font-weight: 600;
 `
 
 interface BudgetSectionStyleProps {
@@ -198,6 +245,7 @@ interface BudgetSectionStyleProps {
 }
 
 const BudgetSectionStyle = styled.div<BudgetSectionStyleProps>`
+  font-size: 14px;
   ${props => props.type === 'police' && css`
     text-align: left;
     color: red;
@@ -206,4 +254,15 @@ const BudgetSectionStyle = styled.div<BudgetSectionStyleProps>`
     text-align: right;
     color: yellow;
   `}
+`
+
+const ChartWrapper = styled.div`
+  max-width: 150px;
+  margin: auto;
+  margin-top: 20px;
+`
+
+const DefundMessage = styled.div`
+  margin-top: 30px;
+  text-align: center;
 `
