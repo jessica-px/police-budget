@@ -1,5 +1,6 @@
 import React from 'react';
 import { createGlobalStyle } from 'styled-components'
+import { Generator } from 'Generator';
 
 
 // -------------------------------------------------------- //
@@ -10,7 +11,7 @@ function App() {
   return (
     <React.Fragment>
       <GlobalStyle />
-      Hello World
+      <Generator />
     </React.Fragment>
   );
 }
