@@ -231,7 +231,9 @@ const getStartingDigits = (number: number, numToRemove: number) => {
 const numToWord = (number: number): string => {
   const length = Math.ceil(Math.log10(number + 1));
   if (length > 9) {
-    const digits = getStartingDigits(number, 9);
+    // For #s in the billions, show first two digits with a decimal
+    let digits = getStartingDigits(number, 8);
+    digits = digits.split('').join('.');
     return `${digits} billion`;
   }
   else if (length > 6) {
