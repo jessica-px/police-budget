@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import styled, { css } from 'styled-components'
 import { PieChart } from 'react-minimal-pie-chart';
+import { AlternativeDropdown } from 'Dropdowns';
 import { City, Alternative } from 'Types';
 
 // DUMMY DATA
@@ -55,7 +56,7 @@ export const Generator = () => {
         <HeadlinePolice> police budget</HeadlinePolice>, we could pay for
       </HeadlineWrapper>
       <AlternativeNumber>{alternativeAmount}</AlternativeNumber>
-      <AlternativeDropdown>{alternative.name}</AlternativeDropdown>
+      <AlternativeDropdown alternative={alternative}/>
       <CenteredText>
         Instead, city spending looks like this:
       </CenteredText>
@@ -197,13 +198,6 @@ const AlternativeNumber = styled.div`
   font-weight: 800;
 `
 
-const AlternativeDropdown = styled.div`
-  color: yellow;
-  font-weight: 800;
-  font-size: 22px;
-  text-align: center;
-  margin-bottom: 25px;
-`
 
 const BudgetComparisonWrapper = styled.div`
   display: flex;
