@@ -41,9 +41,15 @@ const CollapsibleSection = ({ title, children, subSection }: CollapsibleSectionP
 
   return (
     <React.Fragment>
-      {subSection ?
-        <CollapsibleSubHeader onClick={() => toggleShowChildren()}>{ title }</CollapsibleSubHeader> :
-        <h1 onClick={() => toggleShowChildren()}>{ title }</h1>
+      {subSection
+        ?
+        <CollapsibleSubHeader onClick={() => toggleShowChildren()}>
+          { title } <Arrow open={showChildren} subSection={subSection} />
+        </CollapsibleSubHeader>
+        :
+        <h1 onClick={() => toggleShowChildren()}>
+          { title } <Arrow open={showChildren} subSection={subSection} />
+        </h1>
       }
       { showChildren && children }
     </React.Fragment>
@@ -118,6 +124,25 @@ const AlternativeData = ({alternative}: AnternativeDataProps) => (
 // -------------------------------------------------------- //
 //                           Styles                         //
 // -------------------------------------------------------- //
+
+interface ArrowProps {
+  open: boolean;
+  subSection: boolean;
+}
+
+const Arrow = styled.span<ArrowProps>`
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: ${props => props.open ? `rotate(45deg)` : `rotate(-45deg)`};
+  color: white;
+  margin-bottom: 3px;
+  ${props => props.subSection && css`
+    border-color: yellow;
+    color: yellow;
+  `}
+`
 
 const CollapsibleSubHeader = styled.h2`
   color: yellow;
