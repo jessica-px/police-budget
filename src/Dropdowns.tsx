@@ -39,7 +39,7 @@ export const CityDropdown = ({city, allCities, setCity}: CityDropdownProps) => {
         </Trigger>
         <Menu placement="bottom" maxHeight="200px">
         {allCities.map(city => (
-          <Item value={city.name}>{city.name}</Item>
+          <Item value={city.name}>{city.name}, {city.state}</Item>
         ))}
         </Menu>
     </Dropdown>
