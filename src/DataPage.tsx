@@ -18,6 +18,11 @@ const otherData = alternatives.filter(a => !a.salary);
 export const DataPage = () => (
   <PageWrapper>
     <CitySection />
+    <CollapsibleSection title='Salary Data' subSection={false}>
+      <Paragraph>All salary data uses state averages taken from
+        the <a href="">U.S Bureau of Labor Statistics</a>.
+      </Paragraph>
+    </CollapsibleSection>
     <OtherDataSection />
   </PageWrapper>
 )
