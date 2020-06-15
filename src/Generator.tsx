@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react'
 import styled, { css } from 'styled-components'
 import { Chart } from 'Chart';
 import { AlternativeDropdown, CityDropdown } from 'Dropdowns';
-import { City, Alternative } from 'Types';
-import cities from 'cities.json';
+import { City, Alternative, getUnitCost, getDeptBudget, getDeptName } from 'Types';
+import cities from 'cities2.json';
+import alternatives from 'alternatives.json';
 
 
 
@@ -13,22 +14,7 @@ import cities from 'cities.json';
 
 export const Generator = () => {
   const [city, setCity] = useState<City>(cities[0]);
-  const [alternative, setAlternative] = useState<Alternative>(city.alternatives[0]);
-  const [alternativeAmount, setAlternativeAmount] = useState<string>();
-
-  useEffect(() => {
-    const amount = (city.policeBudget / 2) / alternative.cost;
-    const roundedAmount = Math.round(amount);
-    const amountWithCommas = roundedAmount.toLocaleString()
-    setAlternativeAmount(amountWithCommas);
-  })
-
-  const setCityAndUpdate = (city: City): void => {
-    setCity(city);
-    // get alternative for this city (so we don't keep displaying the old one)
-    const newAlt = city.alternatives.filter(alt => alt.name === alternative.name)[0];
-    setAlternative(newAlt);
-  }
+  const [alternative, setAlternative] = useState<Alternative>(alternatives[0]);
 
   return (
     <PageWrapper>
@@ -36,14 +22,14 @@ export const Generator = () => {
         With 50% of the <CityDropdown
                           city={city}
                           allCities={cities}
-                          setCity={setCityAndUpdate}
+                          setCity={setCity}
                          /><br/>
         <HeadlinePolice> police budget</HeadlinePolice>, we could pay for
       </HeadlineWrapper>
-      <AlternativeNumber>{alternativeAmount}</AlternativeNumber>
+      <AlternativeNumber>{getDisplayAmount(city, alternative)}</AlternativeNumber>
       <AlternativeDropdown
         currAlt={alternative}
-        allAlternatives={city.alternatives}
+        allAlternatives={alternatives}
         setAlternative={setAlternative}
       />
       <CenteredText>
@@ -52,7 +38,7 @@ export const Generator = () => {
       <BudgetComparison city={city} alternative={alternative} />
       <Chart
         policePercent={findPercent(city.policeBudget, city.generalFund)}
-        altPercent={findPercent(alternative.deptBudget, city.generalFund)}
+        altPercent={findPercent(getDeptBudget(alternative, city.name, cities), city.generalFund)}
       />
       <DefundMessage>Tell {city.name} to <strong>#defundthepolice</strong>.</DefundMessage>
     </PageWrapper>
@@ -79,8 +65,8 @@ const BudgetComparison = ({city, alternative}: BudgetComparisonProps) => (
       type='police'
     />
     <BudgetSection
-      name={alternative.dept}
-      budget={alternative.deptBudget}
+      name={getDeptName(alternative, city.name)}
+      budget={getDeptBudget(alternative, city.name, cities)}
       generalFund={city.generalFund}
       type='alt'
     />
@@ -136,6 +122,15 @@ const numToWord = (number: number): string => {
   else {
     return number.toString();
   }
+}
+
+const getDisplayAmount = (city: City, alternative: Alternative): string => {
+  const halfBudget = city.policeBudget / 2;
+  const unitCost = getUnitCost(alternative, city.name);
+  const amount = halfBudget / unitCost;
+  const roundedAmount = Math.round(amount);
+  const amountWithCommas = roundedAmount.toLocaleString()
+  return amountWithCommas;
 }
 
 // -------------------------------------------------------- //
