@@ -1,6 +1,7 @@
 import React from 'react';
 import { createGlobalStyle } from 'styled-components'
 import { Generator } from 'Generator';
+import { ThemeProvider, DEFAULT_THEME } from '@zendeskgarden/react-theming';
 
 
 // -------------------------------------------------------- //
@@ -9,10 +10,10 @@ import { Generator } from 'Generator';
 
 function App() {
   return (
-    <React.Fragment>
+    <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Generator />
-    </React.Fragment>
+    </ThemeProvider>
   );
 }
 
@@ -33,5 +34,15 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Open Sans', sans-serif;
   }
 `
+
+// Theme override for Zendesk garden's dropdown component
+const theme = {
+  ...DEFAULT_THEME,
+  "colors": {
+    ...DEFAULT_THEME.colors,
+    "background": "#EEE",
+    "foreground": "#000",
+  }
+};
 
 export default App;
