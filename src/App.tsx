@@ -1,7 +1,13 @@
 import React from 'react';
 import { createGlobalStyle } from 'styled-components'
 import { Generator } from 'Generator';
+import { DataPage } from 'DataPage';
 import { ThemeProvider, DEFAULT_THEME } from '@zendeskgarden/react-theming';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 
 
 // -------------------------------------------------------- //
@@ -10,10 +16,19 @@ import { ThemeProvider, DEFAULT_THEME } from '@zendeskgarden/react-theming';
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <Generator />
-    </ThemeProvider>
+    <Router>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <Switch>
+          <Route path="/data">
+            <DataPage />
+          </Route>
+          <Route path="/">
+            <Generator />
+          </Route>
+        </Switch>
+      </ThemeProvider>
+    </Router>
   );
 }
 
