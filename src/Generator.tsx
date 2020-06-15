@@ -127,7 +127,7 @@ const BudgetSection = ({name, budget, generalFund, type}: BudgetSectionProps) =>
   <BudgetSectionStyle type={type}>
     <BudgetPercent>{findPercent(budget, generalFund)}%</BudgetPercent>
     <BudgetLabel>&nbsp;{name}</BudgetLabel>
-    <BoldText>{numToWord(budget)}</BoldText>
+    <BoldText>{budget ? `$${numToWord(budget)}` : 'No $ from General Funds'}</BoldText>
   </BudgetSectionStyle>
 )
 
