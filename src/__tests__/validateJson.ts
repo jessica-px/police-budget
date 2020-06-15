@@ -25,6 +25,11 @@ for (let alternative of alternatives) {
     expect(alternative).toHaveProperty('nationalUnitCost');
     expect(alternative).toHaveProperty('cityData');
 
+    if (!alternative.salary) {
+      expect(alternative).toHaveProperty('links');
+      expect(alternative).toHaveProperty('notes');
+    }
+
     for (let city of alternative.cityData) {
       expect(city).toHaveProperty('name');
       expect(city).toHaveProperty('dept');
