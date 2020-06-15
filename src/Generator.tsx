@@ -59,7 +59,7 @@ const defaultLabelStyle = {
 
 export const Generator = () => {
   const [city, setCity] = useState<City>(dummyCity);
-  const [alternative, setAlternative] = useState<Alternative>(dummyCity.alternatives[0]);
+  const [alternative, setAlternative] = useState<Alternative>(dummyCity.alternatives[2]);
   const [alternativeAmount, setAlternativeAmount] = useState<number>();
 
   useEffect(() => {
@@ -74,7 +74,11 @@ export const Generator = () => {
         <HeadlinePolice> police budget</HeadlinePolice>, we could pay for
       </HeadlineWrapper>
       <AlternativeNumber>{alternativeAmount}</AlternativeNumber>
-      <AlternativeDropdown alternative={alternative}/>
+      <AlternativeDropdown
+        currAlt={alternative}
+        allAlternatives={city.alternatives}
+        setAlternative={setAlternative}
+      />
       <CenteredText>
         Instead, city spending looks like this:
       </CenteredText>

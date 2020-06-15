@@ -4,6 +4,17 @@ import { Dropdown, Menu, Item, Trigger } from '@zendeskgarden/react-dropdowns';
 import { City, Alternative } from 'Types';
 
 // -------------------------------------------------------- //
+//                             Helpers                      //
+// -------------------------------------------------------- //
+
+
+// The dropdown component yells if we just pass the object directly
+// so instead we're using the name field to look it up again...
+const getAlternative = (name: string, allAlternatives: Alternative[]) => {
+  return allAlternatives.filter(alternative => alternative.name === name)[0];
+}
+
+// -------------------------------------------------------- //
 //                        City Dropdown                     //
 // -------------------------------------------------------- //
 
@@ -37,26 +48,24 @@ export const CityDropdown = ({city}: CityDropdownProps) => {
 // -------------------------------------------------------- //
 
 interface AlternativeDropdownProps {
-  alternative: Alternative
+  currAlt: Alternative
+  allAlternatives: Alternative[]
+  setAlternative: (x: Alternative) => void;
 }
 
-export const AlternativeDropdown = ({alternative}:AlternativeDropdownProps) => {
+export const AlternativeDropdown = ({currAlt, allAlternatives, setAlternative}: AlternativeDropdownProps) => {
   return (
     <CenterWrapper>
-      <Dropdown onSelect={value => console.log(`Selected: ${value}`)}>
+      <Dropdown onSelect={value => setAlternative(getAlternative(value, allAlternatives))}>
           <Trigger>
           <AlternativeDropdownStyle>
-              {alternative.name} <DropdownArrow />
+              {currAlt.name} <DropdownArrow />
           </AlternativeDropdownStyle>
           </Trigger>
           <Menu placement="bottom" maxHeight="200px">
-          <Item value="option-1">miles of repaved roads</Item>
-          <Item value="option-2">studio apartments</Item>
-          <Item value="option-3">playgrounds</Item>
-          <Item value="option-1">librarians</Item>
-          <Item value="option-1">social workers</Item>
-          <Item value="option-1">afterschool programs</Item>
-          <Item value="option-2">4 year scholarships</Item>
+          {allAlternatives.map(alternative => (
+            <Item value={alternative.name}>{alternative.name}</Item>
+          ))}
           </Menu>
       </Dropdown>
     </CenterWrapper>
