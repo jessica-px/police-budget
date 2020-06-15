@@ -2,7 +2,7 @@
 //                          City Types                      //
 // -------------------------------------------------------- //
 
-interface Link {
+export interface DataLink {
   url: string,
   linkText: string
 }
@@ -17,7 +17,7 @@ export interface City {
   state: string,
   generalFund: number,
   policeBudget: number,
-  links: Link[],
+  links: DataLink[],
   notes: string[],
   departments: Department[]
 }
@@ -36,7 +36,9 @@ export interface Alternative {
   name: string,
   salary: boolean,
   nationalUnitCost: number | null,
-  cityData: CityData[]
+  cityData: CityData[],
+  notes?: string[],
+  links?: DataLink[]
 }
 
 // -------------------------------------------------------- //
