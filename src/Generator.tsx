@@ -181,8 +181,10 @@ const numToWord = (number: number): string => {
 // -------------------------------------------------------- //
 
 const PageWrapper = styled.div`
-  margin: 30px;
-  margin-top: 40px;
+  padding: 30px;
+  padding-top: 40px;
+  margin: auto;
+  max-width: 360px;
 `
 
 const HeadlineWrapper = styled.div`
