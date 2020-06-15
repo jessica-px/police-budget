@@ -59,12 +59,14 @@ const defaultLabelStyle = {
 
 export const Generator = () => {
   const [city, setCity] = useState<City>(dummyCity);
-  const [alternative, setAlternative] = useState<Alternative>(dummyCity.alternatives[2]);
-  const [alternativeAmount, setAlternativeAmount] = useState<number>();
+  const [alternative, setAlternative] = useState<Alternative>(dummyCity.alternatives[0]);
+  const [alternativeAmount, setAlternativeAmount] = useState<string>();
 
   useEffect(() => {
     const amount = (city.policeBudget / 2) / alternative.cost;
-    setAlternativeAmount(parseInt(amount.toFixed(0)));
+    const roundedAmount = (amount.toFixed(0));
+    const amountWithCommas = parseInt(roundedAmount).toLocaleString()
+    setAlternativeAmount(amountWithCommas);
   })
 
   return (
