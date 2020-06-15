@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import styled, { css } from 'styled-components'
 import { PieChart } from 'react-minimal-pie-chart';
-import { AlternativeDropdown } from 'Dropdowns';
+import { AlternativeDropdown, CityDropdown } from 'Dropdowns';
 import { City, Alternative } from 'Types';
 
 // DUMMY DATA
@@ -52,7 +52,7 @@ export const Generator = () => {
   return (
     <PageWrapper>
       <HeadlineWrapper>
-        With 50% of the <CityDropdown>{city.name}, {city.state}</CityDropdown><br/>
+        With 50% of the <CityDropdown city={city} /><br/>
         <HeadlinePolice> police budget</HeadlinePolice>, we could pay for
       </HeadlineWrapper>
       <AlternativeNumber>{alternativeAmount}</AlternativeNumber>
@@ -180,10 +180,6 @@ const HeadlineWrapper = styled.div`
   text-align: center;
   margin-bottom: 10px;
   font-weight: 600;
-`
-
-const CityDropdown = styled.span`
-  text-decoration: underline;
 `
 
 const HeadlinePolice = styled.span`
