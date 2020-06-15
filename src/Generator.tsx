@@ -18,12 +18,12 @@ export const Generator = () => {
 
   useEffect(() => {
     const amount = (city.policeBudget / 2) / alternative.cost;
-    const roundedAmount = (amount.toFixed(0));
-    const amountWithCommas = parseInt(roundedAmount).toLocaleString()
+    const roundedAmount = Math.round(amount);
+    const amountWithCommas = roundedAmount.toLocaleString()
     setAlternativeAmount(amountWithCommas);
   })
 
-  const setCityAndUpdate = (city: City) => {
+  const setCityAndUpdate = (city: City): void => {
     setCity(city);
     // get alternative for this city (so we don't keep displaying the old one)
     const newAlt = city.alternatives.filter(alt => alt.name === alternative.name)[0];
@@ -107,9 +107,9 @@ const BudgetSection = ({name, budget, generalFund, type}: BudgetSectionProps) =>
 //                           Helpers                        //
 // -------------------------------------------------------- //
 
-const findPercent = (smallNum: number, bigNum: number) => {
+const findPercent = (smallNum: number, bigNum: number): number => {
   const decimal = (smallNum / bigNum);
-  return (decimal * 100).toFixed(0);
+  return Math.round(decimal * 100);
 }
 
 const getStartingDigits = (number: number, numToRemove: number) => {

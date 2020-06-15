@@ -7,14 +7,14 @@ import { PieChart } from 'react-minimal-pie-chart';
 // -------------------------------------------------------- //
 
 interface ChartProps {
-  policePercent: string,
-  altPercent: string
+  policePercent: number,
+  altPercent: number
 }
 
 export const Chart = ({policePercent, altPercent}: ChartProps) => (
   <ChartWrapper>
     <PieChart
-      data={generateChartData(parseInt(policePercent), parseInt(altPercent))}
+      data={generateChartData(policePercent, altPercent)}
       startAngle={270}
       labelStyle={{
         ...defaultLabelStyle,
