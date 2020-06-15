@@ -48,6 +48,12 @@ const GlobalStyle = createGlobalStyle`
     color: white;
     font-family: 'Open Sans', sans-serif;
   }
+  a {
+    color: orange;
+    &:hover{
+      opacity: 0.8;
+    }
+  }
 `
 
 // Theme override for Zendesk garden's dropdown component
