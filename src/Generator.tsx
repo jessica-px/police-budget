@@ -1,24 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import styled, { css } from 'styled-components'
-import { PieChart } from 'react-minimal-pie-chart';
+import { Chart } from 'Chart';
 import { AlternativeDropdown, CityDropdown } from 'Dropdowns';
 import { City, Alternative } from 'Types';
 import cities from 'cities.json';
 
-
-const generateChartData = (policePercent: number, altPercent: number) => {
-  const general = 100 - policePercent - altPercent;
-  return [
-    { title: 'General', value: general, color: '#444' },
-    { title: 'Police', value: policePercent, color: 'red' },
-    { title: 'Alternative', value: altPercent, color: 'yellow' }
-  ]
-}
-
-const defaultLabelStyle = {
-  fontSize: '5px',
-  fontFamily: 'sans-serif',
-};
 
 
 // -------------------------------------------------------- //
@@ -116,23 +102,6 @@ const BudgetSection = ({name, budget, generalFund, type}: BudgetSectionProps) =>
   </BudgetSectionStyle>
 )
 
-interface ChartProps {
-  policePercent: string,
-  altPercent: string
-}
-
-const Chart = ({policePercent, altPercent}: ChartProps) => (
-  <ChartWrapper>
-    <PieChart
-      data={generateChartData(parseInt(policePercent), parseInt(altPercent))}
-      startAngle={270}
-      labelStyle={{
-        ...defaultLabelStyle,
-      }}
-      lineWidth={40}
-    />
-  </ChartWrapper>
-)
 
 // -------------------------------------------------------- //
 //                           Helpers                        //
@@ -238,12 +207,6 @@ const BudgetSectionStyle = styled.div<BudgetSectionStyleProps>`
     text-align: right;
     color: yellow;
   `}
-`
-
-const ChartWrapper = styled.div`
-  max-width: 150px;
-  margin: auto;
-  margin-top: 20px;
 `
 
 const DefundMessage = styled.div`
