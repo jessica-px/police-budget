@@ -115,7 +115,7 @@ const AlternativeDropdownStyle = styled.div`
   font-size: 22px;
   padding-bottom: 10px;
   margin: auto;
-  margin-bottom: 15px;
+  margin-bottom: 22px;
   border-bottom: 1px solid yellow;
   &:hover {
     cursor: pointer;
