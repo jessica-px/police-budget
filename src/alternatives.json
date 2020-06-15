@@ -4,8 +4,8 @@
     "salary": true,
     "nationalUnitCost": null,
     "cityData": [
-      {"name": "Oakland", "dept": "Transportation", "unitCost": 30190},
-      {"name": "Los Angeles", "dept": "Transportation",  "unitCost": 30190}
+      {"name": "Oakland", "dept": "Human Services", "unitCost": 30190},
+      {"name": "Los Angeles", "dept": "Parks and Rec",  "unitCost": 30190}
     ]
   },
   {
