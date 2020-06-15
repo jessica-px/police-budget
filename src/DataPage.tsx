@@ -17,6 +17,7 @@ const otherData = alternatives.filter(a => !a.salary);
 
 export const DataPage = () => (
   <PageWrapper>
+    <PageTitle>Data & Sources</PageTitle>
     <CitySection />
     <CollapsibleSection title='Salary Data' subSection={false}>
       <Paragraph>All salary data uses state averages taken from
@@ -133,7 +134,7 @@ const AlternativeData = ({alternative}: AnternativeDataProps) => (
 // -------------------------------------------------------- //
 
 const PageWrapper = styled.div`
-  padding: 40px 30px;
+  padding: 20px 30px;
   margin: auto;
   max-width: 500px;
 `
@@ -145,6 +146,11 @@ const DataSectionWrapper = styled.div`
 const Paragraph = styled.p`
   color: #EEE;
   font-size: 14px;
+`
+
+const PageTitle = styled.h3`
+  text-align: center;
+  color: #DDD;
 `
 
 interface ArrowProps {
