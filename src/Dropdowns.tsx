@@ -14,29 +14,33 @@ const getAlternative = (name: string, allAlternatives: Alternative[]) => {
   return allAlternatives.filter(alternative => alternative.name === name)[0];
 }
 
+// Same as above, but with cities
+const getCity = (name: string, allCities: City[]) => {
+  return allCities.filter(city => city.name === name)[0];
+}
+
 // -------------------------------------------------------- //
 //                        City Dropdown                     //
 // -------------------------------------------------------- //
 
 interface CityDropdownProps {
-  city: City
+  city: City,
+  allCities: City[],
+  setCity: (x: City) => void;
 }
 
-export const CityDropdown = ({city}: CityDropdownProps) => {
+export const CityDropdown = ({city, allCities, setCity}: CityDropdownProps) => {
   return (
-    <Dropdown onSelect={value => console.log(`Selected: ${value}`)}>
+    <Dropdown onSelect={value => setCity(getCity(value, allCities))}>
         <Trigger>
         <CityDropdownStyle>
             {city.name}, {city.state} <CityArrow />
         </CityDropdownStyle>
         </Trigger>
         <Menu placement="bottom" maxHeight="200px">
-        <Item value="option-1">Los Angeles, CA</Item>
-        <Item value="option-2">New York, NY</Item>
-        <Item value="option-3">Boston, MI</Item>
-        <Item value="option-1">San Fransisco, CA</Item>
-        <Item value="option-1">Atlanta, GO</Item>
-        <Item value="option-1">Detroit, MI</Item>
+        {allCities.map(city => (
+          <Item value={city.name}>{city.name}</Item>
+        ))}
         </Menu>
     </Dropdown>
   )

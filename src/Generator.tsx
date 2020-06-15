@@ -5,7 +5,7 @@ import { AlternativeDropdown, CityDropdown } from 'Dropdowns';
 import { City, Alternative } from 'Types';
 
 // DUMMY DATA
-const dummyCity = {
+const oakland = {
   name: 'Oakland',
   state: 'CA',
   generalFund: 655127232,
@@ -25,7 +25,7 @@ const dummyCity = {
     },
     {
       name: 'miles of repaved road',
-      cost: 500,
+      cost: 612000,
       dept: 'Transportation',
       deptBudget: 11707269
     },
@@ -43,6 +43,48 @@ const dummyCity = {
     }
   ]
 }
+
+
+const la = {
+  name: 'Los Angeles',
+  state: 'CA',
+  generalFund: 4471027516,
+  policeBudget: 1734713124,
+  alternatives: [
+    {
+      name: 'childcare workers',
+      cost: 30190,
+      dept: 'Recreation & Parks',
+      deptBudget: 215841602
+    },
+    {
+      name: 'librarians',
+      cost: 60000,
+      dept: 'Public Library',
+      deptBudget: 191531086
+    },
+    {
+      name: 'miles of repaved road',
+      cost: 612000,
+      dept: 'Transportation',
+      deptBudget: 186745769
+    },
+    {
+      name: 'new playgrounds',
+      cost: 105000,
+      dept: 'Recreation & Parks',
+      deptBudget: 215841602
+    },
+    {
+      name: 'studio apartments',
+      cost: 28800,
+      dept: 'Housing',
+      deptBudget: 90564885
+    }
+  ]
+}
+
+const cities = [oakland, la]
 
 const generateChartData = (policePercent: number, altPercent: number) => {
   const general = 100 - policePercent - altPercent;
@@ -64,8 +106,8 @@ const defaultLabelStyle = {
 // -------------------------------------------------------- //
 
 export const Generator = () => {
-  const [city, setCity] = useState<City>(dummyCity);
-  const [alternative, setAlternative] = useState<Alternative>(dummyCity.alternatives[0]);
+  const [city, setCity] = useState<City>(cities[0]);
+  const [alternative, setAlternative] = useState<Alternative>(city.alternatives[0]);
   const [alternativeAmount, setAlternativeAmount] = useState<string>();
 
   useEffect(() => {
@@ -75,10 +117,21 @@ export const Generator = () => {
     setAlternativeAmount(amountWithCommas);
   })
 
+  const setCityAndUpdate = (city: City) => {
+    setCity(city);
+    // get alternative for this city (so we don't keep displaying the old one)
+    const newAlt = city.alternatives.filter(alt => alt.name === alternative.name)[0];
+    setAlternative(newAlt);
+  }
+
   return (
     <PageWrapper>
       <HeadlineWrapper>
-        With 50% of the <CityDropdown city={city} /><br/>
+        With 50% of the <CityDropdown
+                          city={city}
+                          allCities={cities}
+                          setCity={setCityAndUpdate}
+                         /><br/>
         <HeadlinePolice> police budget</HeadlinePolice>, we could pay for
       </HeadlineWrapper>
       <AlternativeNumber>{alternativeAmount}</AlternativeNumber>
