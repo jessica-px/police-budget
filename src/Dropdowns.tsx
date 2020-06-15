@@ -39,7 +39,7 @@ export const CityDropdown = ({city, allCities, setCity}: CityDropdownProps) => {
         </Trigger>
         <Menu placement="bottom" maxHeight="200px">
         {allCities.map(city => (
-          <Item value={city.name}>{city.name}, {city.state}</Item>
+          <Item value={city.name} key={city.name}>{city.name}, {city.state}</Item>
         ))}
         </Menu>
     </Dropdown>
@@ -68,7 +68,7 @@ export const AlternativeDropdown = ({currAlt, allAlternatives, setAlternative}: 
           </Trigger>
           <Menu placement="bottom" maxHeight="200px">
           {allAlternatives.map(alternative => (
-            <Item value={alternative.name}>{alternative.name}</Item>
+            <Item value={alternative.name} key={alternative.name}>{alternative.name}</Item>
           ))}
           </Menu>
       </Dropdown>
