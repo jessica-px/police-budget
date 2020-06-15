@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import styled, { css } from 'styled-components'
 import { PieChart } from 'react-minimal-pie-chart';
+import { City, Alternative } from 'Types';
 
 // DUMMY DATA
 const dummyCity = {
@@ -68,20 +69,6 @@ export const Generator = () => {
   )
 }
 
-interface City {
-  name: string,
-  state: string,
-  generalFund: number,
-  policeBudget: number
-  alternatives: Alternative[]
-}
-
-interface Alternative {
-  name: string,
-  cost: number,
-  dept: string,
-  deptBudget: number
-}
 
 // -------------------------------------------------------- //
 //                        Sub-Components                    //
