@@ -12,10 +12,10 @@ const dummyCity = {
   policeBudget: 301809379,
   alternatives: [
     {
-      name: 'new playgrounds',
-      cost: 105000,
-      dept: 'Parks and Rec',
-      deptBudget: 18558125
+      name: 'childcare workers',
+      cost: 30190,
+      dept: 'Human Services',
+      deptBudget: 15301922
     },
     {
       name: 'librarians',
@@ -24,16 +24,22 @@ const dummyCity = {
       deptBudget: 13000000
     },
     {
-      name: 'studio apartments',
-      cost: 2400,
-      dept: 'Housing',
-      deptBudget: 0
-    },
-    {
       name: 'miles of repaved road',
       cost: 500,
       dept: 'Transportation',
       deptBudget: 11707269
+    },
+    {
+      name: 'new playgrounds',
+      cost: 105000,
+      dept: 'Parks and Rec',
+      deptBudget: 18558125
+    },
+    {
+      name: 'studio apartments',
+      cost: 28800,
+      dept: 'Housing',
+      deptBudget: 0
     }
   ]
 }
