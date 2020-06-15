@@ -22,16 +22,43 @@ export const DataPage = () => (
   </div>
 )
 
+// -------------------------------------------------------- //
+//                       Sub-Components                     //
+// -------------------------------------------------------- //
+
+interface CollapsibleSectionProps {
+  title: string,
+  children: React.ReactNode,
+  subSection: boolean
+}
+
+const CollapsibleSection = ({ title, children, subSection }: CollapsibleSectionProps) => {
+  const [showChildren, setShowChildren] = useState<boolean>(false);
+
+  const toggleShowChildren = () => {
+    setShowChildren(!showChildren);
+  }
+
+  return (
+    <React.Fragment>
+      {subSection ?
+        <CollapsibleSubHeader onClick={() => toggleShowChildren()}>{ title }</CollapsibleSubHeader> :
+        <h1 onClick={() => toggleShowChildren()}>{ title }</h1>
+      }
+      { showChildren && children }
+    </React.Fragment>
+  )
+}
+
 
 // -------------------------------------------------------- //
 //                    City Budget Components                //
 // -------------------------------------------------------- //
 
 const CitySection = () => (
-  <div>
-    <h1>City Budgets</h1>
+  <CollapsibleSection title='City Budgets' subSection={false}>
     {cities.map(city => <CityData city={city} />)}
-  </div>
+  </CollapsibleSection>
 )
 
 interface CityDataProps {
@@ -39,13 +66,12 @@ interface CityDataProps {
 }
 
 const CityData = ({city}: CityDataProps) => (
-  <div>
-    <h2>{city.name}</h2>
+  <CollapsibleSection title={city.name} subSection={true}>
     <h3>Links</h3>
     <div>{city.links.map(link => <LinkDisplay link={link} />)}</div>
     <h3>Notes</h3>
     <div>{city.notes.map(note => <p>{note}</p>)}</div>
-  </div>
+  </CollapsibleSection>
 )
 
 interface LinkDisplayProps {
@@ -61,10 +87,9 @@ const LinkDisplay = ({link}: LinkDisplayProps) => (
 // -------------------------------------------------------- //
 
 const OtherDataSection = () => (
-  <div>
-    <h1>Other Data</h1>
+  <CollapsibleSection title='Other Data' subSection={false}>
     {otherData.map(alt => <AlternativeData alternative={alt} />)}
-  </div>
+  </CollapsibleSection>
 )
 
 interface AnternativeDataProps {
@@ -72,8 +97,7 @@ interface AnternativeDataProps {
 }
 
 const AlternativeData = ({alternative}: AnternativeDataProps) => (
-  <div>
-    <h2>{alternative.name}</h2>
+  <CollapsibleSection title={alternative.name} subSection={true}>
     {
       alternative.links &&
       <React.Fragment>
@@ -88,9 +112,13 @@ const AlternativeData = ({alternative}: AnternativeDataProps) => (
         <div>{alternative.notes.map(note => <p>{note}</p>)}</div>
       </React.Fragment>
     }
-  </div>
+  </CollapsibleSection>
 )
 
 // -------------------------------------------------------- //
 //                           Styles                         //
 // -------------------------------------------------------- //
+
+const CollapsibleSubHeader = styled.h2`
+  color: yellow;
+`
