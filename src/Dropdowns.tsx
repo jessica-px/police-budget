@@ -1,15 +1,44 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Dropdown, Menu, Item, Trigger } from '@zendeskgarden/react-dropdowns';
-import { Alternative } from 'Types';
+import { City, Alternative } from 'Types';
 
 // -------------------------------------------------------- //
-//                       Main Component                     //
+//                        City Dropdown                     //
+// -------------------------------------------------------- //
+
+interface CityDropdownProps {
+  city: City
+}
+
+export const CityDropdown = ({city}: CityDropdownProps) => {
+  return (
+    <Dropdown onSelect={value => console.log(`Selected: ${value}`)}>
+        <Trigger>
+        <CityDropdownStyle>
+            {city.name}, {city.state} <CityArrow />
+        </CityDropdownStyle>
+        </Trigger>
+        <Menu placement="bottom" maxHeight="200px">
+        <Item value="option-1">Los Angeles, CA</Item>
+        <Item value="option-2">New York, NY</Item>
+        <Item value="option-3">Boston, MI</Item>
+        <Item value="option-1">San Fransisco, CA</Item>
+        <Item value="option-1">Atlanta, GO</Item>
+        <Item value="option-1">Detroit, MI</Item>
+        </Menu>
+    </Dropdown>
+  )
+}
+
+
+// -------------------------------------------------------- //
+//                     Alternative Dropdown                 //
 // -------------------------------------------------------- //
 
 interface AlternativeDropdownProps {
-    alternative: Alternative
-  }
+  alternative: Alternative
+}
 
 export const AlternativeDropdown = ({alternative}:AlternativeDropdownProps) => {
   return (
@@ -47,9 +76,28 @@ const DropdownArrow = styled.div`
   margin-bottom: 3px;
 `
 
+const CityArrow = styled.div`
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 2px;
+  transform: rotate(45deg);
+  margin-bottom: 3px;
+`
+
 // -------------------------------------------------------- //
 //                          Styling                         //
 // -------------------------------------------------------- //
+
+const CityDropdownStyle = styled.div`
+  display:inline-block;
+  color: white;
+  padding-bottom: 2px;
+  border-bottom: 1px solid white;
+  &:hover {
+    cursor: pointer;
+  }
+`
 
 const AlternativeDropdownStyle = styled.div`
   display:inline-block;
