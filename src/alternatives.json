@@ -1,0 +1,77 @@
+[
+  {
+    "name": "childcare workers",
+    "salary": true,
+    "nationalUnitCost": null,
+    "cityData": [
+      {"name": "Oakland", "dept": "Transportation", "unitCost": 30190},
+      {"name": "Los Angeles", "dept": "Transportation",  "unitCost": 30190}
+    ]
+  },
+  {
+    "name": "miles of repaved road",
+    "salary": false,
+    "links": [
+      {
+        "url": "http://whatever.gov",
+        "linkText": "A Cool Link (PDF)"
+      }
+    ],
+    "notes": [
+      "This is the first paragraph of text. It can have multiple sentences.",
+      "This is the second paragraph of text."
+    ],
+    "nationalUnitCost": 1224000,
+    "cityData": [
+      {"name": "Oakland", "dept": "Transportation", "unitCost": null},
+      {"name": "Los Angeles", "dept": "Transportation", "unitCost": null}
+    ]
+  },
+  {
+    "name": "new playgrounds",
+    "salary": false,
+    "links": [
+      {
+        "url": "http://whatever.gov",
+        "linkText": "A Cool Link (PDF)"
+      }
+    ],
+    "notes": [
+      "This is the first paragraph of text. It can have multiple sentences.",
+      "This is the second paragraph of text."
+    ],
+    "nationalUnitCost": 105000,
+    "cityData": [
+      {"name": "Oakland", "dept": "Parks and Rec", "unitCost": null},
+      {"name": "Los Angeles", "dept": "Parks and Rec", "unitCost": null}
+    ]
+  },
+  {
+    "name": "studio apartments",
+    "salary": false,
+    "links": [
+      {
+        "url": "http://whatever.gov",
+        "linkText": "A Cool Link (PDF)"
+      }
+    ],
+    "notes": [
+      "This is the first paragraph of text. It can have multiple sentences.",
+      "This is the second paragraph of text."
+    ],
+    "nationalUnitCost": null,
+    "cityData": [
+      {"name": "Oakland", "dept": "Human Services", "unitCost": 28800},
+      {"name": "Los Angeles", "dept": "Housing", "unitCost": 28800}
+    ]
+  },
+  {
+    "name": "librarians",
+    "salary": true,
+    "nationalUnitCost": null,
+    "cityData": [
+      {"name": "Oakland", "dept": "Public Library", "unitCost": 70000},
+      {"name": "Los Angeles", "dept": "Public Library", "unitCost": 70000}
+    ]
+  }
+]
