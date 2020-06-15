@@ -60,8 +60,8 @@ export const Generator = () => {
       </CenteredText>
       <BudgetComparison city={city} alternative={alternative} />
       <Chart
-        policePercent={46}
-        altPercent={3}
+        policePercent={findPercent(city.policeBudget, city.generalFund)}
+        altPercent={findPercent(alternative.deptBudget, city.generalFund)}
       />
       <DefundMessage>Tell {city.name} to <strong>#defundthepolice</strong>.</DefundMessage>
     </PageWrapper>
@@ -126,14 +126,14 @@ const BudgetSection = ({name, budget, generalFund, type}: BudgetSectionProps) =>
 )
 
 interface ChartProps {
-  policePercent: number,
-  altPercent: number
+  policePercent: string,
+  altPercent: string
 }
 
 const Chart = ({policePercent, altPercent}: ChartProps) => (
   <ChartWrapper>
     <PieChart
-      data={generateChartData(policePercent, altPercent)}
+      data={generateChartData(parseInt(policePercent), parseInt(altPercent))}
       startAngle={270}
       labelStyle={{
         ...defaultLabelStyle,
