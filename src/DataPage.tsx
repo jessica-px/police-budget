@@ -16,10 +16,10 @@ const otherData = alternatives.filter(a => !a.salary);
 
 
 export const DataPage = () => (
-  <div>
+  <PageWrapper>
     <CitySection />
     <OtherDataSection />
-  </div>
+  </PageWrapper>
 )
 
 // -------------------------------------------------------- //
@@ -47,9 +47,9 @@ const CollapsibleSection = ({ title, children, subSection }: CollapsibleSectionP
           { title } <Arrow open={showChildren} subSection={subSection} />
         </CollapsibleSubHeader>
         :
-        <h1 onClick={() => toggleShowChildren()}>
+        <CollapsibleHeader onClick={() => toggleShowChildren()}>
           { title } <Arrow open={showChildren} subSection={subSection} />
-        </h1>
+        </CollapsibleHeader>
       }
       { showChildren && children }
     </React.Fragment>
@@ -73,10 +73,12 @@ interface CityDataProps {
 
 const CityData = ({city}: CityDataProps) => (
   <CollapsibleSection title={city.name} subSection={true}>
-    <h3>Links</h3>
-    <div>{city.links.map(link => <LinkDisplay link={link} />)}</div>
-    <h3>Notes</h3>
-    <div>{city.notes.map(note => <p>{note}</p>)}</div>
+    <DataSectionWrapper>
+      <h4>Links</h4>
+      <div>{city.links.map(link => <LinkDisplay link={link} />)}</div>
+      <h4>Notes</h4>
+      <div>{city.notes.map(note => <Paragraph>{note}</Paragraph>)}</div>
+    </DataSectionWrapper>
   </CollapsibleSection>
 )
 
@@ -85,7 +87,7 @@ interface LinkDisplayProps {
 }
 
 const LinkDisplay = ({link}: LinkDisplayProps) => (
-  <a href={link.url}>{link.linkText}</a>
+  <a href={link.url} target='_blank' rel="noopener noreferrer">{link.linkText}</a>
 )
 
 // -------------------------------------------------------- //
@@ -106,17 +108,17 @@ const AlternativeData = ({alternative}: AnternativeDataProps) => (
   <CollapsibleSection title={alternative.name} subSection={true}>
     {
       alternative.links &&
-      <React.Fragment>
-        <h3>Links</h3>
+      <DataSectionWrapper>
+        <h4>Links</h4>
         <div>{alternative.links.map(link => <LinkDisplay link={link} />)}</div>
-      </React.Fragment>
+      </DataSectionWrapper>
     }
     {
       alternative.notes &&
-      <React.Fragment>
-        <h3>Notes</h3>
-        <div>{alternative.notes.map(note => <p>{note}</p>)}</div>
-      </React.Fragment>
+      <DataSectionWrapper>
+        <h4>Notes</h4>
+        <div>{alternative.notes.map(note => <Paragraph>{note}</Paragraph>)}</div>
+      </DataSectionWrapper>
     }
   </CollapsibleSection>
 )
@@ -124,6 +126,21 @@ const AlternativeData = ({alternative}: AnternativeDataProps) => (
 // -------------------------------------------------------- //
 //                           Styles                         //
 // -------------------------------------------------------- //
+
+const PageWrapper = styled.div`
+  padding: 40px 30px;
+  margin: auto;
+  max-width: 500px;
+`
+
+const DataSectionWrapper = styled.div`
+  margin-left: 15px;
+`
+
+const Paragraph = styled.p`
+  color: #EEE;
+  font-size: 14px;
+`
 
 interface ArrowProps {
   open: boolean;
@@ -144,6 +161,19 @@ const Arrow = styled.span<ArrowProps>`
   `}
 `
 
-const CollapsibleSubHeader = styled.h2`
+const CollapsibleHeader = styled.h2`
+  padding-bottom: 5px;
+  border-bottom: 2px solid #555;
+  &:hover{
+    opacity: 0.8;
+    cursor: pointer;
+  }
+`
+
+const CollapsibleSubHeader = styled.h3`
   color: yellow;
+  &:hover{
+    opacity: 0.8;
+    cursor: pointer;
+  }
 `
