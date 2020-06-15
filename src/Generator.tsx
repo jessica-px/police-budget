@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components'
 import { Chart } from 'Chart';
 import { AlternativeDropdown, CityDropdown } from 'Dropdowns';
 import { City, Alternative, getUnitCost, getDeptBudget, getDeptName } from 'Types';
-import cities from 'cities2.json';
+import cities from 'cities.json';
 import alternatives from 'alternatives.json';
 
 

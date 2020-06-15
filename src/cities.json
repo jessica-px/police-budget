@@ -4,36 +4,32 @@
     "state": "CA",
     "generalFund": 655127232,
     "policeBudget": 301809379,
-    "alternatives": [
+    "links": [
       {
-        "name": "childcare workers",
-        "cost": 30190,
-        "dept": "Human Services",
-        "deptBudget": 15301922
+        "url": "http://whatever.gov",
+        "linkText": "A Cool Link (PDF)"
+      }
+    ],
+    "notes": [
+      "This is the first paragraph of text. It can have multiple sentences.",
+      "This is the second paragraph of text."
+    ],
+    "departments": [
+      {
+        "name": "Parks and Rec",
+        "budget": 18558125
       },
       {
-        "name": "librarians",
-        "cost": 60000,
-        "dept": "Public Library",
-        "deptBudget": 13000000
+        "name": "Human Services",
+        "budget": 15301922
       },
       {
-        "name": "miles of repaved road",
-        "cost": 1224000,
-        "dept": "Transportation",
-        "deptBudget": 11707269
+        "name": "Transportation",
+        "budget": 11707269
       },
       {
-        "name": "new playgrounds",
-        "cost": 105000,
-        "dept": "Parks and Rec",
-        "deptBudget": 18558125
-      },
-      {
-        "name": "studio apartments",
-        "cost": 28800,
-        "dept": "Human Services",
-        "deptBudget": 15301922
+        "name": "Public Library",
+        "budget": 13000000
       }
     ]
   },
@@ -42,36 +38,36 @@
     "state": "CA",
     "generalFund": 4471027516,
     "policeBudget": 1734713124,
-    "alternatives": [
+    "links": [
       {
-        "name": "childcare workers",
-        "cost": 30190,
-        "dept": "Recreation & Parks",
-        "deptBudget": 215841602
+        "url": "http://whatever.gov",
+        "linkText": "A Cool Link (PDF)"
+      }
+    ],
+    "notes": [
+      "This is the first paragraph of text. It can have multiple sentences.",
+      "This is the second paragraph of text."
+    ],
+    "departments": [
+      {
+        "name": "Parks and Rec",
+        "budget": 215841602
       },
       {
-        "name": "librarians",
-        "cost": 60000,
-        "dept": "Public Library",
-        "deptBudget": 191531086
+        "name": "Human Services",
+        "budget": 15301922
       },
       {
-        "name": "miles of repaved road",
-        "cost": 1224000,
-        "dept": "Transportation",
-        "deptBudget": 186745769
+        "name": "Transportation",
+        "budget": 186745769
       },
       {
-        "name": "new playgrounds",
-        "cost": 105000,
-        "dept": "Recreation & Parks",
-        "deptBudget": 215841602
+        "name": "Public Library",
+        "budget": 191531086
       },
       {
-        "name": "studio apartments",
-        "cost": 28800,
-        "dept": "Housing",
-        "deptBudget": 90564885
+        "name": "Housing",
+        "budget": 90564885
       }
     ]
   }
