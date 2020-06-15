@@ -68,7 +68,7 @@ const CollapsibleSection = ({ title, children, subSection }: CollapsibleSectionP
 
 const CitySection = () => (
   <CollapsibleSection title='City Budgets' subSection={false}>
-    {cities.map(city => <CityData city={city} />)}
+    {cities.map(city => <CityData city={city} key={city.name} />)}
   </CollapsibleSection>
 )
 
@@ -80,9 +80,9 @@ const CityData = ({city}: CityDataProps) => (
   <CollapsibleSection title={city.name} subSection={true}>
     <DataSectionWrapper>
       <h4>Links</h4>
-      <div>{city.links.map(link => <LinkDisplay link={link} />)}</div>
+      <div>{city.links.map(link => <LinkDisplay link={link} key={link.url}/>)}</div>
       <h4>Notes</h4>
-      <div>{city.notes.map(note => <Paragraph>{note}</Paragraph>)}</div>
+      <div>{city.notes.map((note, i) => <Paragraph key={i}>{note}</Paragraph>)}</div>
     </DataSectionWrapper>
   </CollapsibleSection>
 )
@@ -101,7 +101,7 @@ const LinkDisplay = ({link}: LinkDisplayProps) => (
 
 const OtherDataSection = () => (
   <CollapsibleSection title='Other Data' subSection={false}>
-    {otherData.map(alt => <AlternativeData alternative={alt} />)}
+    {otherData.map(alt => <AlternativeData alternative={alt} key={alt.name}/>)}
   </CollapsibleSection>
 )
 
@@ -115,14 +115,14 @@ const AlternativeData = ({alternative}: AnternativeDataProps) => (
       alternative.links &&
       <DataSectionWrapper>
         <h4>Links</h4>
-        <div>{alternative.links.map(link => <LinkDisplay link={link} />)}</div>
+        <div>{alternative.links.map(link => <LinkDisplay link={link} key={link.url}/>)}</div>
       </DataSectionWrapper>
     }
     {
       alternative.notes &&
       <DataSectionWrapper>
         <h4>Notes</h4>
-        <div>{alternative.notes.map(note => <Paragraph>{note}</Paragraph>)}</div>
+        <div>{alternative.notes.map((note, i) => <Paragraph key={i}>{note}</Paragraph>)}</div>
       </DataSectionWrapper>
     }
   </CollapsibleSection>
