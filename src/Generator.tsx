@@ -16,6 +16,24 @@ const dummyCity = {
       cost: 105000,
       dept: 'Parks and Rec',
       deptBudget: 18558125
+    },
+    {
+      name: 'librarians',
+      cost: 60000,
+      dept: 'Public Library',
+      deptBudget: 13000000
+    },
+    {
+      name: 'studio apartments',
+      cost: 2400,
+      dept: 'Housing',
+      deptBudget: 0
+    },
+    {
+      name: 'miles of repaved road',
+      cost: 500,
+      dept: 'Transportation',
+      deptBudget: 11707269
     }
   ]
 }
