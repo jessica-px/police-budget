@@ -112,7 +112,7 @@ const findPercent = (smallNum: number, bigNum: number): number => {
   return Math.round(decimal * 100);
 }
 
-const getStartingDigits = (number: number, numToRemove: number) => {
+const getStartingDigits = (number: number, numToRemove: number): string => {
   const numString = number.toString();
   return numString.substring(0, numString.length - numToRemove);
 }

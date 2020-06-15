@@ -28,7 +28,13 @@ export const Chart = ({policePercent, altPercent}: ChartProps) => (
 //                           Helpers                        //
 // -------------------------------------------------------- //
 
-const generateChartData = (policePercent: number, altPercent: number) => {
+interface ChartDataItem {
+  title: string,
+  value: number,
+  color: string
+}
+
+const generateChartData = (policePercent: number, altPercent: number): ChartDataItem[] => {
   const general = 100 - policePercent - altPercent;
   return [
     { title: 'General', value: general, color: '#444' },
