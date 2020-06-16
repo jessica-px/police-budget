@@ -154,6 +154,7 @@ const HeadlineWrapper = styled.div`
   text-align: center;
   margin-bottom: 10px;
   font-weight: 600;
+  line-height: 1.5;
 `
 
 const HeadlinePolice = styled.span`
