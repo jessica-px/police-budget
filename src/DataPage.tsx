@@ -21,7 +21,7 @@ export const DataPage = () => (
     <CitySection />
     <CollapsibleSection title='Salary Data' subSection={false}>
       <Paragraph>All salary data uses state averages taken from
-        the <a href="">U.S Bureau of Labor Statistics</a>.
+        the <a href="">U.S. Bureau of Labor Statistics</a>.
       </Paragraph>
     </CollapsibleSection>
     <OtherDataSection />
@@ -93,7 +93,9 @@ interface LinkDisplayProps {
 }
 
 const LinkDisplay = ({link}: LinkDisplayProps) => (
-  <a href={link.url} target='_blank' rel="noopener noreferrer">{link.linkText}</a>
+  <Paragraph>
+    <a href={link.url} target='_blank' rel="noopener noreferrer">{link.linkText}</a>
+  </Paragraph>
 )
 
 // -------------------------------------------------------- //
