@@ -43,8 +43,11 @@ export const DataPage = () => (
     <PageTitle>Sources</PageTitle>
     <CitySection />
     <CollapsibleSection title='Salary Data' subSection={false}>
-      <Paragraph>All salary data uses state averages taken from
+      <Paragraph>
+        All salary data uses state averages taken from
         the <a href="">U.S. Bureau of Labor Statistics</a>.
+        Note that this does not include any additional costs paid for
+        by the employer, such as employee benefits.
       </Paragraph>
     </CollapsibleSection>
     <OtherDataSection />
