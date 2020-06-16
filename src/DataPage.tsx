@@ -68,15 +68,6 @@ export const DataPage = () => (
   </PageWrapper>
 )
 
-const GoBackLinkWapper = styled.div`
-  text-align: center;
-  padding-bottom: 25px;
-`
-
-const GoBackLink = styled(Link)`
-  color: #CCC;
-  text-decoration: none;
-`
 
 // -------------------------------------------------------- //
 //                       Sub-Components                     //
@@ -254,4 +245,14 @@ const CollapsibleSubHeader = styled.h3`
     opacity: 0.8;
     cursor: pointer;
   }
+`
+
+const GoBackLinkWapper = styled.div`
+  text-align: center;
+  padding-bottom: 25px;
+`
+
+const GoBackLink = styled(Link)`
+  color: #CCC;
+  text-decoration: none;
 `
