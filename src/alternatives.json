@@ -77,5 +77,24 @@
       {"name": "Oakland", "dept": "Public Library", "unitCost": 70000},
       {"name": "Los Angeles", "dept": "Public Library", "unitCost": 70000}
     ]
+  },
+  {
+    "name": "years of groceries",
+    "salary": false,
+    "links": [
+      {
+        "url": "https://www.fhwa.dot.gov/policy/23cpr/",
+        "linkText": "USDA Food Plans: Cost of Food Report for JANUARY 2020 (PDF)"
+      }
+    ],
+    "notes": [
+      "From this report, we used the numbers for a month's worth of low-cost groceries for a family of two ($499.80) and a family of four ($857.70) and derived the average ($679).",
+      "When multiplied by 12, this gives us an estimate for a year's worth of groceries for a family of 2-4 people ($8148)."
+    ],
+    "nationalUnitCost": 8148,
+    "cityData": [
+      {"name": "Oakland", "dept": "Human Services", "unitCost": null},
+      {"name": "Los Angeles", "dept": "General Purposes", "unitCost": null}
+    ]
   }
 ]
