@@ -22,7 +22,7 @@ export const Generator = () => {
       <HeadlineWrapper>
         With 50% of the <CityDropdown
                           city={city}
-                          allCities={cities}
+                          allCities={cities.sort()}
                           setCity={setCity}
                          /><br/>
         <HeadlinePolice> police budget</HeadlinePolice>, we could pay for
@@ -30,7 +30,7 @@ export const Generator = () => {
       <AlternativeNumber>{getDisplayAmount(city, alternative)}</AlternativeNumber>
       <AlternativeDropdown
         currAlt={alternative}
-        allAlternatives={alternatives}
+        allAlternatives={alternatives.sort()}
         setAlternative={setAlternative}
       />
       <CenteredText>

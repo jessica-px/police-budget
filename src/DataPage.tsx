@@ -9,7 +9,7 @@ import alternatives from 'alternatives.json';
 //                          Helpers                         //
 // -------------------------------------------------------- //
 
-const otherData = alternatives.filter(a => !a.salary);
+const otherData = alternatives.filter(a => !a.salary).sort();
 
 // -------------------------------------------------------- //
 //                       Main Component                     //
@@ -111,7 +111,7 @@ const CollapsibleSection = ({ title, children, subSection }: CollapsibleSectionP
 
 const CitySection = () => (
   <CollapsibleSection title='City Budgets' subSection={false}>
-    {cities.map(city => <CityData city={city} key={city.name} />)}
+    {cities.sort().map(city => <CityData city={city} key={city.name} />)}
   </CollapsibleSection>
 )
 
