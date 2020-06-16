@@ -106,5 +106,36 @@
         "budget": 45760383
       }
     ]
+  },
+  {
+    "name": "Detroit",
+    "state": "MI",
+    "generalFund": 1481000000,
+    "policeBudget": 330000000,
+    "links": [
+      {
+        "url": "https://detroitmi.gov/sites/detroitmi.localhost/files/migrated_docs/financial-reports/CityofDetroitFY2019CAFRFINAL12.14.2019.pdf",
+        "linkText": "2019 Comprehensive Annual Financial Report (PDF)"
+      }
+    ],
+    "notes": ["No notes for Detroit"],
+    "departments": [
+      {
+        "name": "Housing",
+        "budget": 33554117
+      },
+      {
+        "name": "General Services",
+        "budget": 83147344
+      },
+      {
+        "name": "Public Works",
+        "budget": 7213886
+      },
+      {
+        "name": "Recreation",
+        "budget": 25819796
+      }
+    ]
   }
 ]

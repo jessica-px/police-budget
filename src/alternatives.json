@@ -6,7 +6,8 @@
     "cityData": [
       {"name": "Oakland", "dept": "Human Services", "unitCost": 30190},
       {"name": "Los Angeles", "dept": "Parks and Rec",  "unitCost": 30190},
-      {"name": "Philadelphia", "dept": "Human Services", "unitCost": 23610}
+      {"name": "Philadelphia", "dept": "Human Services", "unitCost": 23610},
+      {"name": "Detroit", "dept": "General Services", "unitCost":  24580}
     ]
   },
   {
@@ -30,7 +31,8 @@
     "cityData": [
       {"name": "Oakland", "dept": "Transportation", "unitCost": null},
       {"name": "Los Angeles", "dept": "Transportation", "unitCost": null},
-      {"name": "Philadelphia", "dept": "Streets", "unitCost": null}
+      {"name": "Philadelphia", "dept": "Streets", "unitCost": null},
+      {"name": "Detroit", "dept": "Public Works", "unitCost": null}
     ]
   },
   {
@@ -49,7 +51,8 @@
     "cityData": [
       {"name": "Oakland", "dept": "Parks and Rec", "unitCost": null},
       {"name": "Los Angeles", "dept": "Parks and Rec", "unitCost": null},
-      {"name": "Philadelphia", "dept": "Parks and Rec", "unitCost": null}
+      {"name": "Philadelphia", "dept": "Parks and Rec", "unitCost": null},
+      {"name": "Detroit", "dept": "General Services", "unitCost": null}
     ]
   },
   {
@@ -70,7 +73,8 @@
     "cityData": [
       {"name": "Oakland", "dept": "Human Services", "unitCost": 14820},
       {"name": "Los Angeles", "dept": "Housing", "unitCost": 13812},
-      {"name": "Philadelphia", "dept": "Homeless Services", "unitCost": 9876}
+      {"name": "Philadelphia", "dept": "Homeless Services", "unitCost": 9876},
+      {"name": "Detroit", "dept": "Recreation", "unitCost":  571}
     ]
   },
   {
@@ -80,7 +84,8 @@
     "cityData": [
       {"name": "Oakland", "dept": "Public Library", "unitCost": 70000},
       {"name": "Los Angeles", "dept": "Public Library", "unitCost": 70000},
-      {"name": "Philadelphia", "dept": "Free Library", "unitCost": 57190}
+      {"name": "Philadelphia", "dept": "Free Library", "unitCost": 57190},
+      {"name": "Detroit", "dept": "Recreation", "unitCost":  32200}
     ]
   },
   {
@@ -100,7 +105,8 @@
     "cityData": [
       {"name": "Oakland", "dept": "Human Services", "unitCost": null},
       {"name": "Los Angeles", "dept": "General Purposes", "unitCost": null},
-      {"name": "Philadelphia", "dept": "Homeless Services", "unitCost": null}
+      {"name": "Philadelphia", "dept": "Homeless Services", "unitCost": null},
+      {"name": "Detroit", "dept": "Housing", "unitCost": null}
     ]
   }
 ]
