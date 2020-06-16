@@ -37,11 +37,10 @@ function App() {
 // -------------------------------------------------------- //
 
 const GlobalStyle = createGlobalStyle`
-  html {
+  html, body, #root, #root > div {
     height: 100%
   }
   body {
-    min-height: 100%;
     margin: 0;
     padding: 0;
     background-color: black;
