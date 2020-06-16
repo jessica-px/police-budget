@@ -11,6 +11,14 @@ import alternatives from 'alternatives.json';
 
 const otherData = alternatives.filter(a => !a.salary).sort();
 
+const titleCase = (str: string): string => {
+  const glue = ['of', 'for', 'and'];
+  return str.replace(/(\w)(\w*)/g, function(_, i, r){
+      var j = i.toUpperCase() + (r != null ? r : "");
+      return (glue.indexOf(j.toLowerCase())<0)?j:j.toLowerCase();
+  });
+};
+
 // -------------------------------------------------------- //
 //                       Main Component                     //
 // -------------------------------------------------------- //
@@ -155,7 +163,7 @@ interface AnternativeDataProps {
 }
 
 const AlternativeData = ({alternative}: AnternativeDataProps) => (
-  <CollapsibleSection title={alternative.name} subSection={true}>
+  <CollapsibleSection title={titleCase(alternative.name)} subSection={true}>
     {
       alternative.links &&
       <DataSectionWrapper>
