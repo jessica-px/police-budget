@@ -7,7 +7,7 @@ import { City, Alternative, getUnitCost, getDeptBudget, getDeptName } from 'Type
 import cities from 'cities.json';
 import alternatives from 'alternatives.json';
 
-
+const sortedCities = cities.sort((a, b) => (a.name > b.name) ? 1 : -1);
 
 // -------------------------------------------------------- //
 //                       Main Component                     //
@@ -22,7 +22,7 @@ export const Generator = () => {
       <HeadlineWrapper>
         With 50% of the <CityDropdown
                           city={city}
-                          allCities={cities.sort()}
+                          allCities={sortedCities}
                           setCity={setCity}
                          /><br/>
         <HeadlinePolice> police budget</HeadlinePolice>, we could pay for
