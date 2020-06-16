@@ -69,5 +69,42 @@
         "budget": 177754704
       }
     ]
+  },
+  {
+    "name": "Philadelphia",
+    "state": "PA",
+    "generalFund": 4995073000,
+    "policeBudget": 740915097,
+    "links": [
+      {
+        "url": "http://phlcouncil.com/wp-content/uploads/2019/03/FY20-Budget-in-Brief_All_Proposed.pdf",
+        "linkText": "The Mayor's Operating Budget in Brief for Fiscal Year 2020 (PDF)"
+      }
+    ],
+    "notes": [
+      "No notes for Philly right now."
+    ],
+    "departments": [
+      {
+        "name": "Parks and Rec",
+        "budget": 67858055
+      },
+      {
+        "name": "Streets",
+        "budget": 107042919
+      },
+      {
+        "name": "Human Services",
+        "budget": 115965013
+      },
+      {
+        "name": "Homeless Services",
+        "budget": 58995719
+      },
+      {
+        "name": "Free Library",
+        "budget": 45760383
+      }
+    ]
   }
 ]
