@@ -177,8 +177,7 @@ const Paragraph = styled.p`
 `
 
 const PageTitle = styled.h3`
-  text-align: center;
-  color: #DDD;
+  color: yellow;
 `
 
 interface ArrowProps {
@@ -195,8 +194,8 @@ const Arrow = styled.span<ArrowProps>`
   color: white;
   margin-bottom: 3px;
   ${props => props.subSection && css`
-    border-color: yellow;
-    color: yellow;
+    border-color: white;
+    color: white;
   `}
 `
 
@@ -210,7 +209,8 @@ const CollapsibleHeader = styled.h2`
 `
 
 const CollapsibleSubHeader = styled.h3`
-  color: yellow;
+  color: white;
+  font-weight: 400;
   &:hover{
     opacity: 0.8;
     cursor: pointer;
