@@ -87,7 +87,7 @@ interface BudgetSectionProps {
 
 const BudgetSection = ({name, budget, generalFund, type}: BudgetSectionProps) => (
   <BudgetSectionStyle type={type}>
-    <BudgetPercent>{findPercent(budget, generalFund)}%</BudgetPercent>
+    <BudgetPercent>{displayPercent(budget, generalFund)}%</BudgetPercent>
     <BudgetLabel>&nbsp;{name}</BudgetLabel>
     <BoldText>{budget ? `$${numToWord(budget)}` : 'No $ from General Funds'}</BoldText>
   </BudgetSectionStyle>
@@ -100,7 +100,18 @@ const BudgetSection = ({name, budget, generalFund, type}: BudgetSectionProps) =>
 
 const findPercent = (smallNum: number, bigNum: number): number => {
   const decimal = (smallNum / bigNum);
-  return Math.round(decimal * 100);
+  const percent = Math.round(decimal * 100);
+  return percent;
+}
+
+const displayPercent = (smallNum: number, bigNum: number): string => {
+  const percent = findPercent(smallNum, bigNum);
+  if (percent === 0) {
+    return "< 1"
+  }
+  else {
+    return percent.toString()
+  }
 }
 
 const getStartingDigits = (number: number, numToRemove: number): string => {
