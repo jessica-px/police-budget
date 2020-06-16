@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styled, { css } from 'styled-components'
+import { Link } from "react-router-dom";
 import { Chart } from 'Chart';
 import { AlternativeDropdown, CityDropdown } from 'Dropdowns';
 import { City, Alternative, getUnitCost, getDeptBudget, getDeptName } from 'Types';
@@ -41,9 +42,13 @@ export const Generator = () => {
         altPercent={findPercent(getDeptBudget(alternative, city.name, cities), city.generalFund)}
       />
       <DefundMessage>Tell {city.name} to <strong>#defundthepolice</strong>.</DefundMessage>
+      <DataLinkWrapper>
+        <DataLink to='/data'>View Data & Sources</DataLink>
+      </DataLinkWrapper>
     </PageWrapper>
   )
 }
+
 
 
 // -------------------------------------------------------- //
@@ -207,4 +212,14 @@ const BudgetSectionStyle = styled.div<BudgetSectionStyleProps>`
 const DefundMessage = styled.div`
   margin-top: 30px;
   text-align: center;
+`
+const DataLinkWrapper = styled.div`
+  margin-top: 10px;
+  text-align: center;
+`
+
+const DataLink = styled(Link)`
+  color: #BBB;
+  text-decoration: none;
+  font-size: 14px;
 `
