@@ -105,7 +105,6 @@ const CityArrow = styled.div`
 const CityDropdownStyle = styled.div`
   display:inline-block;
   color: white;
-  padding-bottom: 2px;
   border-bottom: 1px solid white;
   &:hover {
     cursor: pointer;
@@ -117,7 +116,7 @@ const AlternativeDropdownStyle = styled.div`
   color: yellow;
   font-weight: 800;
   font-size: 22px;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   margin: auto;
   margin-bottom: 22px;
   border-bottom: 1px solid yellow;
