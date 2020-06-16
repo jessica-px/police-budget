@@ -13,13 +13,17 @@
     "salary": false,
     "links": [
       {
-        "url": "http://whatever.gov",
-        "linkText": "A Cool Link (PDF)"
+        "url": "https://www.fhwa.dot.gov/policy/23cpr/",
+        "linkText": "Status of the Nation’s Highways, Bridges, and Transit: Conditions & Performance (23rd Edition) (PDF)"
+      },
+      {
+        "url": "https://www.strongtowns.org/journal/2020/1/27/how-much-does-a-mile-of-road-actually-cost",
+        "linkText": "strongtowns.org (website)"
       }
     ],
     "notes": [
-      "This is the first paragraph of text. It can have multiple sentences.",
-      "This is the second paragraph of text."
+      "This study presents a range of prices per mile of repaved lane depending on urban population -- for this app, those prices were averaged, resulting in $612,000 per lane.",
+      "Then, we multiplied this by 2 to get the cost of repaving one mile of 2-lane road: $1,224,000."
     ],
     "nationalUnitCost": 1224000,
     "cityData": [
@@ -32,13 +36,12 @@
     "salary": false,
     "links": [
       {
-        "url": "http://whatever.gov",
-        "linkText": "A Cool Link (PDF)"
+        "url": "https://content.ces.ncsu.edu/cost-analysis-for-improving-park-facilities-to-promote-park-based-physical-activity",
+        "linkText": "Cost Analysis for Improving Park Facilities to Promote Park-based Physical Activity (website)"
       }
     ],
     "notes": [
-      "This is the first paragraph of text. It can have multiple sentences.",
-      "This is the second paragraph of text."
+      "We used the price listed in this study for a small playground: $100,000 to construct, plus $5,000 maintenance. A small playground describes a single prefabricated play structure or swing set."
     ],
     "nationalUnitCost": 105000,
     "cityData": [
@@ -51,18 +54,19 @@
     "salary": false,
     "links": [
       {
-        "url": "http://whatever.gov",
-        "linkText": "A Cool Link (PDF)"
+        "url": "https://www.apartmentlist.com/rentonomics/rental-price-data/",
+        "linkText": "apartmentlist.com (website)"
       }
     ],
     "notes": [
-      "This is the first paragraph of text. It can have multiple sentences.",
-      "This is the second paragraph of text."
+      "This figure represents the average cost for 12 months of rent in a studio apartment -- that's one year of comfortable housing for an individual or small family.",
+      "Averages for each city are taken from the Jan 2020 data provided by Apartment List, which takes steps to avoid the biases of websites like apartments.com.",
+      "Note that Oakland, CA is not represent by the dataset, and instead uses the state average."
     ],
     "nationalUnitCost": null,
     "cityData": [
-      {"name": "Oakland", "dept": "Human Services", "unitCost": 28800},
-      {"name": "Los Angeles", "dept": "Housing", "unitCost": 28800}
+      {"name": "Oakland", "dept": "Human Services", "unitCost": 1235},
+      {"name": "Los Angeles", "dept": "Housing", "unitCost": 13812}
     ]
   },
   {
