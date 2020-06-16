@@ -37,28 +37,24 @@
     "name": "Los Angeles",
     "state": "CA",
     "generalFund": 4471027516,
-    "policeBudget": 1734713124,
+    "policeBudget": 1676632617,
     "links": [
       {
-        "url": "http://cao.lacity.org/budget19-20/2019-20Budget_Summary.pdf",
-        "linkText": "FY 2019-2020 Budget Summary (PDF)"
+        "url": "https://lacontroller.org/wp-content/uploads/2019/09/BUDGET-2019-20.pdf",
+        "linkText": "FY 2019-2020 Adopted Budget (PDF)"
       }
     ],
     "notes": [
-      "This app uses data from Los Angeles' departmental funding, which is where the majority of the city's General Funds go, but not all of it. More research needed."
+      "No notes for LA right now. I actually managed to find figures for everything from the General Funds."
     ],
     "departments": [
       {
         "name": "Parks and Rec",
-        "budget": 215841602
-      },
-      {
-        "name": "Human Services",
-        "budget": 15301922
+        "budget": 217554843
       },
       {
         "name": "Transportation",
-        "budget": 186745769
+        "budget": 110309566
       },
       {
         "name": "Public Library",
@@ -66,7 +62,11 @@
       },
       {
         "name": "Housing",
-        "budget": 90564885
+        "budget": 11831110
+      },
+      {
+        "name": "General Purposes",
+        "budget": 177754704
       }
     ]
   }
