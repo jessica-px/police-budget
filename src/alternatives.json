@@ -5,7 +5,8 @@
     "nationalUnitCost": null,
     "cityData": [
       {"name": "Oakland", "dept": "Human Services", "unitCost": 30190},
-      {"name": "Los Angeles", "dept": "Parks and Rec",  "unitCost": 30190}
+      {"name": "Los Angeles", "dept": "Parks and Rec",  "unitCost": 30190},
+      {"name": "Philadelphia", "dept": "Human Services", "unitCost": 23610}
     ]
   },
   {
@@ -28,7 +29,8 @@
     "nationalUnitCost": 1224000,
     "cityData": [
       {"name": "Oakland", "dept": "Transportation", "unitCost": null},
-      {"name": "Los Angeles", "dept": "Transportation", "unitCost": null}
+      {"name": "Los Angeles", "dept": "Transportation", "unitCost": null},
+      {"name": "Philadelphia", "dept": "Streets", "unitCost": null}
     ]
   },
   {
@@ -46,7 +48,8 @@
     "nationalUnitCost": 105000,
     "cityData": [
       {"name": "Oakland", "dept": "Parks and Rec", "unitCost": null},
-      {"name": "Los Angeles", "dept": "Parks and Rec", "unitCost": null}
+      {"name": "Los Angeles", "dept": "Parks and Rec", "unitCost": null},
+      {"name": "Philadelphia", "dept": "Parks and Rec", "unitCost": null}
     ]
   },
   {
@@ -66,7 +69,8 @@
     "nationalUnitCost": null,
     "cityData": [
       {"name": "Oakland", "dept": "Human Services", "unitCost": 14820},
-      {"name": "Los Angeles", "dept": "Housing", "unitCost": 13812}
+      {"name": "Los Angeles", "dept": "Housing", "unitCost": 13812},
+      {"name": "Philadelphia", "dept": "Homeless Services", "unitCost": 9876}
     ]
   },
   {
@@ -75,7 +79,8 @@
     "nationalUnitCost": null,
     "cityData": [
       {"name": "Oakland", "dept": "Public Library", "unitCost": 70000},
-      {"name": "Los Angeles", "dept": "Public Library", "unitCost": 70000}
+      {"name": "Los Angeles", "dept": "Public Library", "unitCost": 70000},
+      {"name": "Philadelphia", "dept": "Free Library", "unitCost": 57190}
     ]
   },
   {
@@ -83,7 +88,7 @@
     "salary": false,
     "links": [
       {
-        "url": "https://www.fhwa.dot.gov/policy/23cpr/",
+        "url": "https://www.fns.usda.gov/cnpp/usda-food-plans-cost-food-reports-monthly-reports",
         "linkText": "USDA Food Plans: Cost of Food Report for JANUARY 2020 (PDF)"
       }
     ],
@@ -94,7 +99,8 @@
     "nationalUnitCost": 8148,
     "cityData": [
       {"name": "Oakland", "dept": "Human Services", "unitCost": null},
-      {"name": "Los Angeles", "dept": "General Purposes", "unitCost": null}
+      {"name": "Los Angeles", "dept": "General Purposes", "unitCost": null},
+      {"name": "Philadelphia", "dept": "Homeless Services", "unitCost": null}
     ]
   }
 ]
