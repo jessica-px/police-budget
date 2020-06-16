@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styled, { css } from 'styled-components'
+import { Link } from "react-router-dom";
 import { City, Alternative, DataLink } from 'Types';
 import cities from 'cities.json';
 import alternatives from 'alternatives.json';
@@ -17,42 +18,57 @@ const otherData = alternatives.filter(a => !a.salary);
 
 export const DataPage = () => (
   <PageWrapper>
-    <PageTitle>About the Data</PageTitle>
-    <CollapsibleSection title='Disclaimer' subSection={false}>
-      <Paragraph>
-        This site represents data in a very simplified, generalized way -- it's intended for starting conversations, not for basing financial decisions on.
-      </Paragraph>
-      <Paragraph>
-        But honesty and transparency are still key. Nothing here is intended to mislead. So provided below
-        are sources and rationale for the numbers used by this app.
-      </Paragraph>
-    </CollapsibleSection>
-    <CollapsibleSection title='General Funds' subSection={false}>
-      <Paragraph>
-        Unless otherwise noted, "City Budget", for the purposes of this app, means General Funds.
-      </Paragraph>
-      <Paragraph>
-        General Funds (also called discretionary funds) is money that can be
-        freely distributed by the mayor and council members without any direct input
-        from the average citizen. It is usually the majority of the city's total budget, and comes primarily from general taxes.
-      </Paragraph>
-      <Paragraph>
-        In every major city in the U.S., police departments are given an enormous percentage of the General Funds money.
-      </Paragraph>
-    </CollapsibleSection>
-    <PageTitle>Sources</PageTitle>
-    <CitySection />
-    <CollapsibleSection title='Salary Data' subSection={false}>
-      <Paragraph>
-        All salary data uses state averages taken from
-        the <a href="">U.S. Bureau of Labor Statistics</a>.
-        Note that this does not include any additional costs paid for
-        by the employer, such as employee benefits.
-      </Paragraph>
-    </CollapsibleSection>
-    <OtherDataSection />
+    <div>
+      <PageTitle>About the Data</PageTitle>
+      <CollapsibleSection title='Disclaimer' subSection={false}>
+        <Paragraph>
+          This site represents data in a very simplified, generalized way -- it's intended for starting conversations, not for basing financial decisions on.
+        </Paragraph>
+        <Paragraph>
+          But honesty and transparency are still key. Nothing here is intended to mislead. So provided below
+          are sources and rationale for the numbers used by this app.
+        </Paragraph>
+      </CollapsibleSection>
+      <CollapsibleSection title='General Funds' subSection={false}>
+        <Paragraph>
+          Unless otherwise noted, "City Budget", for the purposes of this app, means General Funds.
+        </Paragraph>
+        <Paragraph>
+          General Funds (also called discretionary funds) is money that can be
+          freely distributed by the mayor and council members without any direct input
+          from the average citizen. It is usually the majority of the city's total budget, and comes primarily from general taxes.
+        </Paragraph>
+        <Paragraph>
+          In every major city in the U.S., police departments are given an enormous percentage of the General Funds money.
+        </Paragraph>
+      </CollapsibleSection>
+      <PageTitle>Sources</PageTitle>
+      <CitySection />
+      <CollapsibleSection title='Salary Data' subSection={false}>
+        <Paragraph>
+          All salary data uses state averages taken from
+          the <a href="">U.S. Bureau of Labor Statistics</a>.
+          Note that this does not include any additional costs paid for
+          by the employer, such as employee benefits.
+        </Paragraph>
+      </CollapsibleSection>
+      <OtherDataSection />
+    </div>
+    <GoBackLinkWapper>
+      <GoBackLink to='/'><BackArrow/> Back to Main Page</GoBackLink>
+    </GoBackLinkWapper>
   </PageWrapper>
 )
+
+const GoBackLinkWapper = styled.div`
+  text-align: center;
+  padding-bottom: 25px;
+`
+
+const GoBackLink = styled(Link)`
+  color: #CCC;
+  text-decoration: none;
+`
 
 // -------------------------------------------------------- //
 //                       Sub-Components                     //
@@ -162,9 +178,14 @@ const AlternativeData = ({alternative}: AnternativeDataProps) => (
 // -------------------------------------------------------- //
 
 const PageWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
   padding: 20px 30px;
   margin: auto;
   max-width: 500px;
+  height: 100%;
 `
 
 const DataSectionWrapper = styled.div`
@@ -197,6 +218,16 @@ const Arrow = styled.span<ArrowProps>`
     border-color: white;
     color: white;
   `}
+`
+
+const BackArrow = styled.span`
+  border: solid #CCC;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(135deg);
+  color: #CCC;
+  margin-bottom: 2px;
 `
 
 const CollapsibleHeader = styled.h2`
