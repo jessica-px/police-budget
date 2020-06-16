@@ -1,4 +1,4 @@
-import cities from 'cities2.json';
+import cities from 'cities.json';
 import alternatives from 'alternatives.json';
 
 for (let city of cities) {
