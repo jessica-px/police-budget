@@ -43,40 +43,6 @@ export const DataPage = () => (
 
 
 // -------------------------------------------------------- //
-//                       Sub-Components                     //
-// -------------------------------------------------------- //
-
-interface CollapsibleSectionProps {
-  title: string,
-  children: React.ReactNode,
-  subSection: boolean
-}
-
-const CollapsibleSection = ({ title, children, subSection }: CollapsibleSectionProps) => {
-  const [showChildren, setShowChildren] = useState<boolean>(false);
-
-  const toggleShowChildren = () => {
-    setShowChildren(!showChildren);
-  }
-
-  return (
-    <React.Fragment>
-      {subSection
-        ?
-        <CollapsibleSubHeader onClick={() => toggleShowChildren()}>
-          { title } <Arrow open={showChildren} subSection={subSection} />
-        </CollapsibleSubHeader>
-        :
-        <CollapsibleHeader onClick={() => toggleShowChildren()}>
-          { title } <Arrow open={showChildren} subSection={subSection} />
-        </CollapsibleHeader>
-      }
-      { showChildren && children }
-    </React.Fragment>
-  )
-}
-
-// -------------------------------------------------------- //
 //                     Section Components                   //
 // -------------------------------------------------------- //
 
@@ -186,6 +152,40 @@ const AlternativeData = ({alternative}: AnternativeDataProps) => (
     }
   </CollapsibleSection>
 )
+
+// -------------------------------------------------------- //
+//                       Sub-Components                     //
+// -------------------------------------------------------- //
+
+interface CollapsibleSectionProps {
+  title: string,
+  children: React.ReactNode,
+  subSection: boolean
+}
+
+const CollapsibleSection = ({ title, children, subSection }: CollapsibleSectionProps) => {
+  const [showChildren, setShowChildren] = useState<boolean>(false);
+
+  const toggleShowChildren = () => {
+    setShowChildren(!showChildren);
+  }
+
+  return (
+    <React.Fragment>
+      {subSection
+        ?
+        <CollapsibleSubHeader onClick={() => toggleShowChildren()}>
+          { title } <Arrow open={showChildren} subSection={subSection} />
+        </CollapsibleSubHeader>
+        :
+        <CollapsibleHeader onClick={() => toggleShowChildren()}>
+          { title } <Arrow open={showChildren} subSection={subSection} />
+        </CollapsibleHeader>
+      }
+      { showChildren && children }
+    </React.Fragment>
+  )
+}
 
 // -------------------------------------------------------- //
 //                           Styles                         //
