@@ -71,7 +71,7 @@
     ],
     "nationalUnitCost": null,
     "cityData": [
-      {"name": "Oakland", "dept": "Human Services", "unitCost": 14820},
+      {"name": "Oakland", "dept": "Human Services", "unitCost": 21804},
       {"name": "Los Angeles", "dept": "Housing", "unitCost": 13812},
       {"name": "Philadelphia", "dept": "Homeless Services", "unitCost": 9876},
       {"name": "Detroit", "dept": "Housing", "unitCost":  6852}
