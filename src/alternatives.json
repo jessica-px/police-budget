@@ -11,6 +11,17 @@
     ]
   },
   {
+    "name": "social workers",
+    "salary": true,
+    "nationalUnitCost": null,
+    "cityData": [
+      {"name": "Oakland", "dept": "Human Services", "unitCost": 80980},
+      {"name": "Los Angeles", "dept": "Homeless Services",  "unitCost": 71190},
+      {"name": "Philadelphia", "dept": "Human Services", "unitCost": 66060},
+      {"name": "Detroit", "dept": "Health", "unitCost":  58050}
+    ]
+  },
+  {
     "name": "miles of repaved road",
     "salary": false,
     "links": [
