@@ -78,17 +78,6 @@
     ]
   },
   {
-    "name": "librarians",
-    "salary": true,
-    "nationalUnitCost": null,
-    "cityData": [
-      {"name": "Oakland", "dept": "Public Library", "unitCost": 70000},
-      {"name": "Los Angeles", "dept": "Public Library", "unitCost": 70000},
-      {"name": "Philadelphia", "dept": "Free Library", "unitCost": 57190},
-      {"name": "Detroit", "dept": "Recreation", "unitCost":  32200}
-    ]
-  },
-  {
     "name": "years of groceries",
     "salary": false,
     "links": [
@@ -107,6 +96,26 @@
       {"name": "Los Angeles", "dept": "General Purposes", "unitCost": null},
       {"name": "Philadelphia", "dept": "Homeless Services", "unitCost": null},
       {"name": "Detroit", "dept": "General Services", "unitCost": null}
+    ]
+  },
+  {
+    "name": "assisted living units",
+    "salary": false,
+    "nationalUnitCost": 48000,
+    "links": [
+      {
+        "url": "https://www.genworth.com/aging-and-you/finances/cost-of-care.html",
+        "linkText": "Cost of Care Survey"
+      }
+    ],
+    "notes": [
+      "This app uses the national annual median cost for a private bedroom in an assissted living facility: $48,612."
+    ],
+    "cityData": [
+      {"name": "Oakland", "dept": "Human Services", "unitCost": null},
+      {"name": "Los Angeles", "dept": "Dept. Aging", "unitCost": null},
+      {"name": "Philadelphia", "dept": "Human Services", "unitCost": null},
+      {"name": "Detroit", "dept": "Health", "unitCost": null}
     ]
   }
 ]

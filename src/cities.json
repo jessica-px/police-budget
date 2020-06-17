@@ -53,6 +53,10 @@
         "budget": 217554843
       },
       {
+        "name": "Dept. Aging",
+        "budget": 3304361
+      },
+      {
         "name": "Transportation",
         "budget": 110309566
       },
@@ -123,6 +127,10 @@
       {
         "name": "Housing",
         "budget": 33554117
+      },
+      {
+        "name": "Health",
+        "budget": 12588490
       },
       {
         "name": "General Services",
