@@ -4,10 +4,10 @@
     "salary": true,
     "nationalUnitCost": null,
     "cityData": [
-      {"name": "Oakland", "dept": "Human Services", "unitCost": 30190},
-      {"name": "Los Angeles", "dept": "Parks and Rec",  "unitCost": 30190},
-      {"name": "Philadelphia", "dept": "Human Services", "unitCost": 23610},
-      {"name": "Detroit", "dept": "General Services", "unitCost":  24580}
+      {"name": "Oakland", "dept": "Human Services", "unitCost": 35590},
+      {"name": "Los Angeles", "dept": "Parks and Rec",  "unitCost": 28670},
+      {"name": "Philadelphia", "dept": "Human Services", "unitCost": 24980},
+      {"name": "Detroit", "dept": "General Services", "unitCost":  24700}
     ]
   },
   {
