@@ -1,35 +1,36 @@
 [
   {
-    "name": "Oakland",
-    "state": "CA",
-    "generalFund": 655127232,
-    "policeBudget": 301809379,
+    "name": "Detroit",
+    "state": "MI",
+    "generalFund": 1481000000,
+    "policeBudget": 330000000,
     "links": [
       {
-        "url": "https://cao-94612.s3.amazonaws.com/documents/FY-2019-21-Adopted-Budget-Policy-Book-FINAL-WEB-VERSION.pdf",
-        "linkText": "FY 2019-21 Adopted Policy Budget (PDF)"
+        "url": "https://detroitmi.gov/sites/detroitmi.localhost/files/migrated_docs/financial-reports/CityofDetroitFY2019CAFRFINAL12.14.2019.pdf",
+        "linkText": "2019 Comprehensive Annual Financial Report (PDF)"
       }
     ],
-    "notes": [
-      "Oakland's housing responsibilities are split between two departments: Human Services and Housing and Community Development.",
-      "This app uses budget data for Human Services, because Housing and Community Development recieves no funding from General Funds. Which is an interesting fact on its own."
-    ],
+    "notes": ["No notes for Detroit"],
     "departments": [
       {
-        "name": "Parks and Rec",
-        "budget": 18558125
+        "name": "Housing",
+        "budget": 33554117
       },
       {
-        "name": "Human Services",
-        "budget": 15301922
+        "name": "Health",
+        "budget": 12588490
       },
       {
-        "name": "Transportation",
-        "budget": 11707269
+        "name": "General Services",
+        "budget": 83147344
       },
       {
-        "name": "Public Library",
-        "budget": 13000000
+        "name": "Public Works",
+        "budget": 7213886
+      },
+      {
+        "name": "Recreation",
+        "budget": 25819796
       }
     ]
   },
@@ -79,6 +80,40 @@
     ]
   },
   {
+    "name": "Oakland",
+    "state": "CA",
+    "generalFund": 655127232,
+    "policeBudget": 301809379,
+    "links": [
+      {
+        "url": "https://cao-94612.s3.amazonaws.com/documents/FY-2019-21-Adopted-Budget-Policy-Book-FINAL-WEB-VERSION.pdf",
+        "linkText": "FY 2019-21 Adopted Policy Budget (PDF)"
+      }
+    ],
+    "notes": [
+      "Oakland's housing responsibilities are split between two departments: Human Services and Housing and Community Development.",
+      "This app uses budget data for Human Services, because Housing and Community Development recieves no funding from General Funds. Which is an interesting fact on its own."
+    ],
+    "departments": [
+      {
+        "name": "Parks and Rec",
+        "budget": 18558125
+      },
+      {
+        "name": "Human Services",
+        "budget": 15301922
+      },
+      {
+        "name": "Transportation",
+        "budget": 11707269
+      },
+      {
+        "name": "Public Library",
+        "budget": 13000000
+      }
+    ]
+  },
+  {
     "name": "Philadelphia",
     "state": "PA",
     "generalFund": 4995073000,
@@ -112,41 +147,6 @@
       {
         "name": "Free Library",
         "budget": 45760383
-      }
-    ]
-  },
-  {
-    "name": "Detroit",
-    "state": "MI",
-    "generalFund": 1481000000,
-    "policeBudget": 330000000,
-    "links": [
-      {
-        "url": "https://detroitmi.gov/sites/detroitmi.localhost/files/migrated_docs/financial-reports/CityofDetroitFY2019CAFRFINAL12.14.2019.pdf",
-        "linkText": "2019 Comprehensive Annual Financial Report (PDF)"
-      }
-    ],
-    "notes": ["No notes for Detroit"],
-    "departments": [
-      {
-        "name": "Housing",
-        "budget": 33554117
-      },
-      {
-        "name": "Health",
-        "budget": 12588490
-      },
-      {
-        "name": "General Services",
-        "budget": 83147344
-      },
-      {
-        "name": "Public Works",
-        "budget": 7213886
-      },
-      {
-        "name": "Recreation",
-        "budget": 25819796
       }
     ]
   }
