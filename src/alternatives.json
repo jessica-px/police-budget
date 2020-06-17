@@ -47,6 +47,26 @@
     ]
   },
   {
+    "name": "miles of new bike lanes",
+    "salary": false,
+    "links": [
+      {
+        "url": "http://www.pedbikeinfo.org/cms/downloads/Countermeasure%20Costs_Report_Nov2013.pdf",
+        "linkText": "Costs for Pedestrian and Bicyclist Infrastructure Improvements (PDF)"
+      }
+    ],
+    "notes": [
+      "This app uses the median cost for a one mile bicycle lane: $89,470."
+    ],
+    "nationalUnitCost": 89470,
+    "cityData": [
+      {"name": "Oakland", "dept": "Transportation", "unitCost": null},
+      {"name": "Los Angeles", "dept": "Transportation", "unitCost": null},
+      {"name": "Philadelphia", "dept": "Streets", "unitCost": null},
+      {"name": "Detroit", "dept": "Public Works", "unitCost": null}
+    ]
+  },
+  {
     "name": "new playgrounds",
     "salary": false,
     "links": [
