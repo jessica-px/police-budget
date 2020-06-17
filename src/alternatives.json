@@ -64,7 +64,7 @@
       }
     ],
     "notes": [
-      "This app uses the median cost for a one mile bicycle lane: $89,470."
+      "This app uses the median cost for 1 mile of new bicycle lane: $89,470."
     ],
     "nationalUnitCost": 89470,
     "cityData": [
@@ -156,7 +156,7 @@
       }
     ],
     "notes": [
-      "This app uses the national annual median cost for a private bedroom in an assissted living facility: $48,612."
+      "This app uses the national annual median cost for a private bedroom in an assisted living facility: $48,612."
     ],
     "cityData": [
       {"name": "Baltimore", "dept": "Health", "unitCost":  null},
