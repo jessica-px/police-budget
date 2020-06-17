@@ -4,10 +4,11 @@
     "salary": true,
     "nationalUnitCost": null,
     "cityData": [
-      {"name": "Oakland", "dept": "Human Services", "unitCost": 35590},
+      {"name": "Detroit", "dept": "General Services", "unitCost":  24700},
       {"name": "Los Angeles", "dept": "Parks and Rec",  "unitCost": 28670},
-      {"name": "Philadelphia", "dept": "Human Services", "unitCost": 24980},
-      {"name": "Detroit", "dept": "General Services", "unitCost":  24700}
+      {"name": "Oakland", "dept": "Human Services", "unitCost": 35590},
+      {"name": "Philadelphia", "dept": "Human Services", "unitCost": 24980}
+
     ]
   },
   {
@@ -15,10 +16,11 @@
     "salary": true,
     "nationalUnitCost": null,
     "cityData": [
-      {"name": "Oakland", "dept": "Human Services", "unitCost": 80980},
+      {"name": "Detroit", "dept": "Health", "unitCost":  58050},
       {"name": "Los Angeles", "dept": "Homeless Services",  "unitCost": 71190},
-      {"name": "Philadelphia", "dept": "Human Services", "unitCost": 66060},
-      {"name": "Detroit", "dept": "Health", "unitCost":  58050}
+      {"name": "Oakland", "dept": "Human Services", "unitCost": 80980},
+      {"name": "Philadelphia", "dept": "Human Services", "unitCost": 66060}
+
     ]
   },
   {
@@ -40,10 +42,10 @@
     ],
     "nationalUnitCost": 1224000,
     "cityData": [
-      {"name": "Oakland", "dept": "Transportation", "unitCost": null},
+      {"name": "Detroit", "dept": "Public Works", "unitCost": null},
       {"name": "Los Angeles", "dept": "Transportation", "unitCost": null},
-      {"name": "Philadelphia", "dept": "Streets", "unitCost": null},
-      {"name": "Detroit", "dept": "Public Works", "unitCost": null}
+      {"name": "Oakland", "dept": "Transportation", "unitCost": null},
+      {"name": "Philadelphia", "dept": "Streets", "unitCost": null}
     ]
   },
   {
@@ -60,10 +62,10 @@
     ],
     "nationalUnitCost": 89470,
     "cityData": [
-      {"name": "Oakland", "dept": "Transportation", "unitCost": null},
+      {"name": "Detroit", "dept": "Public Works", "unitCost": null},
       {"name": "Los Angeles", "dept": "Transportation", "unitCost": null},
-      {"name": "Philadelphia", "dept": "Streets", "unitCost": null},
-      {"name": "Detroit", "dept": "Public Works", "unitCost": null}
+      {"name": "Oakland", "dept": "Transportation", "unitCost": null},
+      {"name": "Philadelphia", "dept": "Streets", "unitCost": null}
     ]
   },
   {
@@ -80,10 +82,10 @@
     ],
     "nationalUnitCost": 105000,
     "cityData": [
-      {"name": "Oakland", "dept": "Parks and Rec", "unitCost": null},
+      {"name": "Detroit", "dept": "General Services", "unitCost": null},
       {"name": "Los Angeles", "dept": "Parks and Rec", "unitCost": null},
-      {"name": "Philadelphia", "dept": "Parks and Rec", "unitCost": null},
-      {"name": "Detroit", "dept": "General Services", "unitCost": null}
+      {"name": "Oakland", "dept": "Parks and Rec", "unitCost": null},
+      {"name": "Philadelphia", "dept": "Parks and Rec", "unitCost": null}
     ]
   },
   {
@@ -102,10 +104,10 @@
     ],
     "nationalUnitCost": null,
     "cityData": [
-      {"name": "Oakland", "dept": "Human Services", "unitCost": 21804},
+      {"name": "Detroit", "dept": "Housing", "unitCost":  6852},
       {"name": "Los Angeles", "dept": "Housing", "unitCost": 13812},
-      {"name": "Philadelphia", "dept": "Homeless Services", "unitCost": 9876},
-      {"name": "Detroit", "dept": "Housing", "unitCost":  6852}
+      {"name": "Oakland", "dept": "Human Services", "unitCost": 21804},
+      {"name": "Philadelphia", "dept": "Homeless Services", "unitCost": 9876}
     ]
   },
   {
@@ -123,10 +125,10 @@
     ],
     "nationalUnitCost": 8148,
     "cityData": [
-      {"name": "Oakland", "dept": "Human Services", "unitCost": null},
+      {"name": "Detroit", "dept": "General Services", "unitCost": null},
       {"name": "Los Angeles", "dept": "General Purposes", "unitCost": null},
-      {"name": "Philadelphia", "dept": "Homeless Services", "unitCost": null},
-      {"name": "Detroit", "dept": "General Services", "unitCost": null}
+      {"name": "Oakland", "dept": "Human Services", "unitCost": null},
+      {"name": "Philadelphia", "dept": "Homeless Services", "unitCost": null}
     ]
   },
   {
@@ -143,10 +145,10 @@
       "This app uses the national annual median cost for a private bedroom in an assissted living facility: $48,612."
     ],
     "cityData": [
-      {"name": "Oakland", "dept": "Human Services", "unitCost": null},
+      {"name": "Detroit", "dept": "Health", "unitCost": null},
       {"name": "Los Angeles", "dept": "Dept. Aging", "unitCost": null},
-      {"name": "Philadelphia", "dept": "Human Services", "unitCost": null},
-      {"name": "Detroit", "dept": "Health", "unitCost": null}
+      {"name": "Oakland", "dept": "Human Services", "unitCost": null},
+      {"name": "Philadelphia", "dept": "Human Services", "unitCost": null}
     ]
   }
 ]
