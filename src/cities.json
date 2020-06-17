@@ -1,5 +1,75 @@
 [
   {
+    "name": "Baltimore",
+    "state": "MD",
+    "generalFund": 1813500000,
+    "policeBudget": 471698973,
+    "links": [
+      {
+        "url": "http://openbudget.baltimorecity.gov/#!/year/2018/operating/0/fund/General/0/department",
+        "linkText": "Baltimore City Open Budget (website)"
+      }
+    ],
+    "notes": ["No notes for Baltimore."],
+    "departments": [
+      {
+        "name": "Housing",
+        "budget": 34974040
+      },
+      {
+        "name": "Public Works",
+        "budget": 79690050
+      },
+      {
+        "name": "Parks and Rec",
+        "budget": 37943688
+      },
+      {
+        "name": "Homeless Services",
+        "budget": 10927491
+      },
+      {
+        "name": "Health",
+        "budget": 40790060
+      }
+    ]
+  },
+  {
+    "name": "Boston",
+    "state": "MA",
+    "generalFund": 2672088866,
+    "policeBudget": 414237378,
+    "links": [
+      {
+        "url": "https://www.boston.gov/sites/default/files/embed/file/2019-09/2-volume_1_-_operating_budget.pdf",
+        "linkText": "FY20 Operating Budget (PDF)"
+      }
+    ],
+    "notes": ["No notes for Boston."],
+    "departments": [
+      {
+        "name": "Human Services",
+        "budget": 139865710
+      },
+      {
+        "name": "Housing",
+        "budget": 20577614
+      },
+      {
+        "name": "Streets",
+        "budget": 169659686
+      },
+      {
+        "name": "Parks and Rec",
+        "budget": 23790347
+      },
+      {
+        "name": "Age Comission",
+        "budget": 3734042
+      }
+    ]
+  },
+  {
     "name": "Detroit",
     "state": "MI",
     "generalFund": 1481000000,
