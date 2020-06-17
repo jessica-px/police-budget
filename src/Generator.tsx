@@ -8,6 +8,7 @@ import cities from 'cities.json';
 import alternatives from 'alternatives.json';
 
 const sortedCities = cities.sort((a, b) => (a.name > b.name) ? 1 : -1);
+const sortedAlternatives = alternatives.sort((a, b) => (a.name > b.name) ? 1 : -1);
 
 // -------------------------------------------------------- //
 //                       Main Component                     //
@@ -30,7 +31,7 @@ export const Generator = () => {
       <AlternativeNumber>{getDisplayAmount(city, alternative)}</AlternativeNumber>
       <AlternativeDropdown
         currAlt={alternative}
-        allAlternatives={alternatives.sort()}
+        allAlternatives={sortedAlternatives}
         setAlternative={setAlternative}
       />
       <CenteredText>
