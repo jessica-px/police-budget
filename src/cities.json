@@ -10,7 +10,7 @@
         "linkText": "Baltimore City Open Budget (website)"
       }
     ],
-    "notes": ["No notes for Baltimore."],
+    "notes": [],
     "departments": [
       {
         "name": "Housing",
@@ -329,7 +329,7 @@
     ],
     "notes": [
       "Oakland's housing responsibilities are split between two departments: Human Services and Housing and Community Development.",
-      "This app uses budget data for Human Services, because Housing and Community Development recieves no funding from General Funds. Which is an interesting fact on its own."
+      "This app uses budget data for Human Services, because Housing and Community Development recieves no funding from General Funds."
     ],
     "departments": [
       {
