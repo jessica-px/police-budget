@@ -14,7 +14,10 @@
       {"name": "Louisville", "dept": "Community Services", "unitCost": 22350},
       {"name": "New York", "dept": "Youth and Community", "unitCost": 30060},
       {"name": "Oakland", "dept": "Human Services", "unitCost": 35590},
-      {"name": "Philadelphia", "dept": "Human Services", "unitCost": 24980}
+      {"name": "Philadelphia", "dept": "Human Services", "unitCost": 24980},
+      {"name": "Phoenix", "dept": "Human Services", "unitCost": 26570},
+      {"name": "Portland", "dept": "Civic Life", "unitCost": 28650},
+      {"name": "St. Louis", "dept": "Health & Welfare", "unitCost": 24140}
     ]
   },
   {
@@ -32,7 +35,10 @@
       {"name": "Louisville", "dept": "Community Services", "unitCost": 67030},
       {"name": "New York", "dept": "Mental Hygiene", "unitCost": 70180},
       {"name": "Oakland", "dept": "Human Services", "unitCost": 80980},
-      {"name": "Philadelphia", "dept": "Human Services", "unitCost": 66060}
+      {"name": "Philadelphia", "dept": "Human Services", "unitCost": 66060},
+      {"name": "Phoenix", "dept": "Human Services", "unitCost": 56100},
+      {"name": "Portland", "dept": "Civic Life", "unitCost": 52090},
+      {"name": "St. Louis", "dept": "Health & Welfare", "unitCost": 56890}
     ]
   },
   {
@@ -64,7 +70,10 @@
       {"name": "Louisville", "dept": "Public Works", "unitCost": null},
       {"name": "New York", "dept": "Transportation", "unitCost": null},
       {"name": "Oakland", "dept": "Transportation", "unitCost": null},
-      {"name": "Philadelphia", "dept": "Streets", "unitCost": null}
+      {"name": "Philadelphia", "dept": "Streets", "unitCost": null},
+      {"name": "Phoenix", "dept": "Streets", "unitCost": null},
+      {"name": "Portland", "dept": "Public Works", "unitCost": null},
+      {"name": "St. Louis", "dept": "Streets", "unitCost": null}
     ]
   },
   {
@@ -91,7 +100,10 @@
       {"name": "Louisville", "dept": "Public Works", "unitCost": null},
       {"name": "New York", "dept": "Transportation", "unitCost": null},
       {"name": "Oakland", "dept": "Transportation", "unitCost": null},
-      {"name": "Philadelphia", "dept": "Streets", "unitCost": null}
+      {"name": "Philadelphia", "dept": "Streets", "unitCost": null},
+      {"name": "Phoenix", "dept": "Streets", "unitCost": null},
+      {"name": "Portland", "dept": "Public Works", "unitCost": null},
+      {"name": "St. Louis", "dept": "Streets", "unitCost": null}
     ]
   },
   {
@@ -118,7 +130,10 @@
       {"name": "Louisville", "dept": "Parks and Rec", "unitCost": null},
       {"name": "New York", "dept": "Parks and Rec", "unitCost": null},
       {"name": "Oakland", "dept": "Parks and Rec", "unitCost": null},
-      {"name": "Philadelphia", "dept": "Parks and Rec", "unitCost": null}
+      {"name": "Philadelphia", "dept": "Parks and Rec", "unitCost": null},
+      {"name": "Phoenix", "dept": "Parks and Rec", "unitCost": null},
+      {"name": "Portland", "dept": "Parks and Rec", "unitCost": null},
+      {"name": "St. Louis", "dept": "Parks and Rec", "unitCost": null}
     ]
   },
   {
@@ -147,7 +162,10 @@
       {"name": "Louisville", "dept": "Community Services", "unitCost": 7008},
       {"name": "New York", "dept": "Housing", "unitCost": 23268},
       {"name": "Oakland", "dept": "Human Services", "unitCost": 21804},
-      {"name": "Philadelphia", "dept": "Homeless Services", "unitCost": 9876}
+      {"name": "Philadelphia", "dept": "Homeless Services", "unitCost": 9876},
+      {"name": "Phoenix", "dept": "Housing", "unitCost": 8724},
+      {"name": "Portland", "dept": "Housing", "unitCost": 12108},
+      {"name": "St. Louis", "dept": "Community Development", "unitCost": 7644}
     ]
   },
   {
@@ -175,7 +193,10 @@
       {"name": "Louisville", "dept": "Community Services", "unitCost": null},
       {"name": "New York", "dept": "Homeless Services", "unitCost": null},
       {"name": "Oakland", "dept": "Human Services", "unitCost": null},
-      {"name": "Philadelphia", "dept": "Homeless Services", "unitCost": null}
+      {"name": "Philadelphia", "dept": "Homeless Services", "unitCost": null},
+      {"name": "Phoenix", "dept": "Human Services", "unitCost": null},
+      {"name": "Portland", "dept": "Civic Life", "unitCost": null},
+      {"name": "St. Louis", "dept": "Health & Welfare", "unitCost": null}
     ]
   },
   {
@@ -202,7 +223,10 @@
       {"name": "Louisville", "dept": "Community Services", "unitCost": null},
       {"name": "New York", "dept": "Dept. for Aging", "unitCost": null},
       {"name": "Oakland", "dept": "Human Services", "unitCost": null},
-      {"name": "Philadelphia", "dept": "Human Services", "unitCost": null}
+      {"name": "Philadelphia", "dept": "Human Services", "unitCost": null},
+      {"name": "Phoenix", "dept": "Human Services", "unitCost": null},
+      {"name": "Portland", "dept": "Civic Life", "unitCost": null},
+      {"name": "St. Louis", "dept": "Health & Welfare", "unitCost": null}
     ]
   }
 ]

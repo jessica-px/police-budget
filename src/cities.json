@@ -386,5 +386,98 @@
         "budget": 45760383
       }
     ]
+  },
+  {
+    "name": "Phoenix",
+    "state": "AZ",
+    "generalFund": 1374444000,
+    "policeBudget": 566452000,
+    "links": [
+      {
+        "url": "https://www.phoenix.gov/budgetsite/budget-books/SummaryBudgetBook2019-20.pdf",
+        "linkText": "2019-20 Summary Budget (PDF)"
+      }
+    ],
+    "notes": [],
+    "departments": [
+      {
+        "name": "Human Services",
+        "budget": 20157000
+      },
+      {
+        "name": "Housing",
+        "budget": 179000
+      },
+      {
+        "name": "Streets",
+        "budget": 20587000
+      },
+      {
+        "name": "Parks and Rec",
+        "budget": 101458000
+      }
+    ]
+  },
+  {
+    "name": "Portland",
+    "state": "OR",
+    "generalFund": 732629871,
+    "policeBudget": 229626408,
+    "links": [
+      {
+        "url": "https://www.portlandoregon.gov/cbo/article/738382",
+        "linkText": "Adopted Budget FY 2019-20 (PDF)"
+      }
+    ],
+    "notes": [],
+    "departments": [
+      {
+        "name": "Civic Life",
+        "budget": 11886087
+      },
+      {
+        "name": "Housing",
+        "budget": 37135200
+      },
+      {
+        "name": "Public Works",
+        "budget": 1229274
+      },
+      {
+        "name": "Parks and Rec",
+        "budget": 95467700
+      }
+    ]
+  },
+  {
+    "name": "St. Louis",
+    "state": "MO",
+    "generalFund": 494204000,
+    "policeBudget": 163719000,
+    "links": [
+      {
+        "url": "https://www.stlouis-mo.gov/government/departments/comptroller/documents/upload/CityofStLouisMO_CAFR-FY19.pdf",
+        "linkText": "2019 Comprehensive Annual Financial Report (PDF)"
+      }
+    ],
+    "notes": [],
+    "departments": [
+      {
+        "name": "Parks and Rec",
+        "budget": 17398000
+      },
+      {
+        "name": "Streets",
+        "budget": 37915000
+      },
+      {
+        "name": "Community Development",
+        "budget": 31720000
+      },
+      {
+        "name": "Health & Welfare",
+        "budget": 3510000
+      }
+    ]
   }
 ]
