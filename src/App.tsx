@@ -59,7 +59,7 @@ const GlobalStyle = createGlobalStyle`
 const theme = {
   ...DEFAULT_THEME,
   "colors": {
-    ...DEFAULT_THEME.colors,
+    ...(DEFAULT_THEME as any).colors,
     "background": "#EEE",
     "foreground": "#000",
   }
