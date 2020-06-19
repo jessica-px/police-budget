@@ -104,8 +104,12 @@ const CityData = ({city}: CityDataProps) => (
     <DataSectionWrapper>
       <h4>Links</h4>
       <div>{city.links.map(link => <LinkDisplay link={link} key={link.url}/>)}</div>
-      <h4>Notes</h4>
-      <div>{city.notes.map((note, i) => <Paragraph key={i}>{note}</Paragraph>)}</div>
+      {city.notes.length > 0 &&
+        <React.Fragment>
+          <h4>Notes</h4>
+          <div>{city.notes.map((note, i) => <Paragraph key={i}>{note}</Paragraph>)}</div>
+        </React.Fragment>
+      }
     </DataSectionWrapper>
   </CollapsibleSection>
 )
