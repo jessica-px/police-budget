@@ -92,7 +92,7 @@ const SalarySection =() => (
   <CollapsibleSection title='Salary Data' subSection={false}>
     <Paragraph>
       All salary data uses local averages taken from
-      the <a href="">U.S. Bureau of Labor Statistics</a>.
+      the <a href="https://data.bls.gov/oes/#/home">U.S. Bureau of Labor Statistics</a>.
       Note that this does not include any additional costs paid for
       by the employer, such as employee benefits.
     </Paragraph>
