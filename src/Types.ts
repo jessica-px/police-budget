@@ -54,7 +54,7 @@ export const getUnitCost = (alt: Alternative, cityName: string): number => {
     return cityData.unitCost;
   }
   else {
-    throw `No city or national unit cost found for ${alt}.`;
+    throw new Error(`No city or national unit cost found for ${alt}.`);
   }
 }
 
