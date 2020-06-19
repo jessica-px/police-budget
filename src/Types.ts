@@ -25,7 +25,7 @@ export interface City {
 // -------------------------------------------------------- //
 //                      Alternative Types                   //
 // -------------------------------------------------------- //
-interface CityData {
+export interface CityData {
   name: string,
   dept: string,
   unitCost: number | null

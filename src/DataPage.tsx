@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styled, { css } from 'styled-components'
 import { Link } from "react-router-dom";
-import { City, Alternative, DataLink } from 'Types';
+import { City, Alternative, DataLink, CityData } from 'Types';
 import cities from 'cities.json';
 import alternatives from 'alternatives.json';
 
@@ -19,6 +19,15 @@ const titleCase = (str: string): string => {
   });
 };
 
+const getRentData = (): CityData[] => {
+  return alternatives.filter(alt => alt.name === 'studio apartments')[0].cityData;
+}
+
+const formatter = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD',
+});
+
 // -------------------------------------------------------- //
 //                       Main Component                     //
 // -------------------------------------------------------- //
@@ -32,6 +41,7 @@ export const DataPage = () => (
       <GeneralFundsSection />
       <PageTitle>Sources</PageTitle>
       <CitySection />
+      <RentSection />
       <SalarySection />
       <OtherDataSection />
     </div>
@@ -91,15 +101,15 @@ const SalarySection =() => (
 
 const CitySection = () => (
   <CollapsibleSection title='City Budgets' subSection={false}>
-    {cities.sort().map(city => <CityData city={city} key={city.name} />)}
+    {cities.sort().map(city => <CityDataSection city={city} key={city.name} />)}
   </CollapsibleSection>
 )
 
-interface CityDataProps {
+interface CityDataSectionProps {
   city: City
 }
 
-const CityData = ({city}: CityDataProps) => (
+const CityDataSection = ({city}: CityDataSectionProps) => (
   <CollapsibleSection title={city.name} subSection={true}>
     <DataSectionWrapper>
       <h4>Links</h4>
@@ -123,6 +133,46 @@ const LinkDisplay = ({link}: LinkDisplayProps) => (
     <a href={link.url} target='_blank' rel="noopener noreferrer">{link.linkText}</a>
   </Paragraph>
 )
+
+// -------------------------------------------------------- //
+//                       Rent Components                    //
+// -------------------------------------------------------- //
+
+
+const RentSection = () => (
+  <CollapsibleSection title='Rent Prices' subSection={false}>
+    <Paragraph>
+      This app uses data for the average cost for 12 months of rent in a studio apartment
+       -- that's one year of housing for an individual or small family.
+    </Paragraph>
+    <Paragraph>
+      Averages for each city are taken from the January 2020 data provided
+       by <a href="https://www.apartmentlist.com/rentonomics/rental-price-data/" target="_blank" rel="noopener noreferrer">Apartment List</a>,
+        which takes steps to avoid the biases of websites like apartments.com.
+    </Paragraph>
+    <Paragraph>
+      Presented below are the monthly averages for each city.
+       Note that Oakland, CA is not represented by the dataset, and instead uses
+        the average for the nearby city of Hayward, CA.
+    </Paragraph>
+    {getRentData().map((cityData) => <RentData cityData={cityData} key={cityData.name} />)}
+  </CollapsibleSection>
+)
+
+interface RentDataProps {
+  cityData: CityData
+}
+
+const RentData = ({cityData}: RentDataProps) => (
+  <RentDataWrapper>
+    <RentSubHeader>{cityData.name}</RentSubHeader>
+    <RentWrapper>
+      {formatter.format(cityData.unitCost as number / 12)}
+    </RentWrapper>
+  </RentDataWrapper>
+)
+
+
 
 // -------------------------------------------------------- //
 //                     Other Data Components                //
@@ -266,6 +316,12 @@ const CollapsibleSubHeader = styled.h3`
   }
 `
 
+const RentSubHeader = styled.h3`
+  display: inline;
+  color: white;
+  font-weight: 400;
+`
+
 const GoBackLinkWapper = styled.div`
   text-align: center;
   padding-bottom: 25px;
@@ -274,4 +330,15 @@ const GoBackLinkWapper = styled.div`
 const GoBackLink = styled(Link)`
   color: #CCC;
   text-decoration: none;
+`
+
+const RentDataWrapper = styled.div`
+  display: flex;
+  max-width: 220px;
+  justify-content: space-between;
+  align-items: center;
+`
+
+const RentWrapper = styled.span`
+  margin-left: 0px;
 `
