@@ -80,7 +80,7 @@ const GeneralFundsSection = () => (
     </Paragraph>
     <Paragraph>
       Note that there are many services which recieve money from both the General Funds and also other sources (specialty taxes, state/federal grants, etc.).
-      The numbers shown here do not tell the entire store of the city's budget -- the focus is only on the General Funds, and what city leaders choose to do with it.
+      The numbers shown here do not tell the entire story of the city's budget -- the focus is only on the General Funds, and what city leaders choose to do with it.
     </Paragraph>
     <Paragraph>
       In most cities in the US, police departments are given an very large cut of the General Funds money.
