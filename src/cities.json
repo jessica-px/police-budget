@@ -213,7 +213,8 @@
       }
     ],
     "notes": [
-      "No notes for LA right now. I actually managed to find figures for everything from the General Funds."
+      "Los Angeles doesn't have a particular department responsible for homeless services, and lists those expenditures under 'General City Purposes' instead.",
+      "Multiple such expenditures were listed, including 'Homelessness Support' ($860,000) and 'Additional Homeless Services' ($9,000,000). For this app, we used the largest relevant figure: 'Homeless Shelter Program' ($26,815,446)."
     ],
     "departments": [
       {
@@ -237,12 +238,8 @@
         "budget": 11831110
       },
       {
-        "name": "General Purposes",
-        "budget": 177754704
-      },
-      {
-        "name": "Homeless Services",
-        "budget": 9000000
+        "name": "Homeless Shelters",
+        "budget": 26815446
       }
     ]
   },
@@ -285,8 +282,8 @@
       }
     ],
     "notes": [
-      "New York's police budget may seem proportionaly small -- at only 5%, it looks much better off than any other city on this list. New York's General Fund budget as a whole ($91,779,218,989) is astronomically higher than any other city in the US, making direct comparisons difficult.",
-      "But to put it in perspective, note that the amount New York spends on police ($5,668,823,293) is larger than Los Angeles' entire General Fund ($4,471,027,516). And Los Angeles is the second largest city in the US."
+      "New York's police budget of $5,668,823,293 may seem proportionaly small -- at only 5%, it looks much better off than any other city on this list. New York's General Fund budget as a whole ($91,779,218,989) is astronomically higher than any other city in the US, making direct comparisons difficult.",
+      "But to put it in perspective, although New York's population is only ~2 times that of Los Angeles, their police budget is more than 3 times larger than Los Angeles' budget of $1,676,632,617."
     ],
     "departments": [
       {
