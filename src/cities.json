@@ -284,7 +284,10 @@
         "linkText": "Comprehensive Annual Financial Report 2019 (PDF)"
       }
     ],
-    "notes": [],
+    "notes": [
+      "New York's police budget may seem proportionaly small -- at only 5%, it looks much better off than any other city on this list. New York's General Fund budget as a whole ($91,779,218,989) is astronomically higher than any other city in the US, making direct comparisons difficult.",
+      "But to put it in perspective, note that the amount New York spends on police ($5,668,823,293) is larger than Los Angeles' entire General Fund ($4,471,027,516). And Los Angeles is the second largest city in the US."
+    ],
     "departments": [
       {
         "name": "Parks and Rec",
