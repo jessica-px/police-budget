@@ -7,10 +7,12 @@
       {"name": "Baltimore", "dept": "Parks and Rec", "unitCost":  25090},
       {"name": "Boston", "dept": "Human Services", "unitCost":  31180},
       {"name": "Detroit", "dept": "General Services", "unitCost":  24700},
+      {"name": "Houston", "dept": "Human Services", "unitCost": 24890},
+      {"name": "Jacksonville", "dept": "Parks and Rec", "unitCost": 25140},
+      {"name": "Las Vegas", "dept": "Youth Development", "unitCost": 22170},
       {"name": "Los Angeles", "dept": "Parks and Rec",  "unitCost": 28670},
       {"name": "Oakland", "dept": "Human Services", "unitCost": 35590},
       {"name": "Philadelphia", "dept": "Human Services", "unitCost": 24980}
-
     ]
   },
   {
@@ -21,10 +23,12 @@
       {"name": "Baltimore", "dept": "Homeless Services", "unitCost":  70690},
       {"name": "Boston", "dept": "Human Services", "unitCost":  64580},
       {"name": "Detroit", "dept": "Health", "unitCost":  58050},
+      {"name": "Houston", "dept": "Health", "unitCost": 69820},
+      {"name": "Jacksonville", "dept": "Community Services", "unitCost": 49420},
+      {"name": "Las Vegas", "dept": "Community Services", "unitCost": 73610},
       {"name": "Los Angeles", "dept": "Homeless Services",  "unitCost": 71190},
       {"name": "Oakland", "dept": "Human Services", "unitCost": 80980},
       {"name": "Philadelphia", "dept": "Human Services", "unitCost": 66060}
-
     ]
   },
   {
@@ -49,6 +53,9 @@
       {"name": "Baltimore", "dept": "Public Works", "unitCost":  null},
       {"name": "Boston", "dept": "Streets", "unitCost":  null},
       {"name": "Detroit", "dept": "Public Works", "unitCost": null},
+      {"name": "Houston", "dept": "Public Works", "unitCost": null},
+      {"name": "Jacksonville", "dept": "Public Works", "unitCost": null},
+      {"name": "Las Vegas", "dept": "Public Works", "unitCost": null},
       {"name": "Los Angeles", "dept": "Transportation", "unitCost": null},
       {"name": "Oakland", "dept": "Transportation", "unitCost": null},
       {"name": "Philadelphia", "dept": "Streets", "unitCost": null}
@@ -71,6 +78,9 @@
       {"name": "Baltimore", "dept": "Public Works", "unitCost":  null},
       {"name": "Boston", "dept": "Streets", "unitCost":  null},
       {"name": "Detroit", "dept": "Public Works", "unitCost": null},
+      {"name": "Houston", "dept": "Public Works", "unitCost": null},
+      {"name": "Jacksonville", "dept": "Public Works", "unitCost": null},
+      {"name": "Las Vegas", "dept": "Public Works", "unitCost": null},
       {"name": "Los Angeles", "dept": "Transportation", "unitCost": null},
       {"name": "Oakland", "dept": "Transportation", "unitCost": null},
       {"name": "Philadelphia", "dept": "Streets", "unitCost": null}
@@ -93,6 +103,9 @@
       {"name": "Baltimore", "dept": "Parks and Rec", "unitCost":  null},
       {"name": "Boston", "dept": "Parks and Rec", "unitCost":  null},
       {"name": "Detroit", "dept": "General Services", "unitCost": null},
+      {"name": "Houston", "dept": "Parks and Rec", "unitCost": null},
+      {"name": "Jacksonville", "dept": "Parks and Rec", "unitCost": null},
+      {"name": "Las Vegas", "dept": "Parks and Rec", "unitCost": null},
       {"name": "Los Angeles", "dept": "Parks and Rec", "unitCost": null},
       {"name": "Oakland", "dept": "Parks and Rec", "unitCost": null},
       {"name": "Philadelphia", "dept": "Parks and Rec", "unitCost": null}
@@ -117,6 +130,9 @@
       {"name": "Baltimore", "dept": "Housing", "unitCost":  9372},
       {"name": "Boston", "dept": "Housing", "unitCost":  18000},
       {"name": "Detroit", "dept": "Housing", "unitCost":  6852},
+      {"name": "Houston", "dept": "Housing", "unitCost": 8940},
+      {"name": "Jacksonville", "dept": "Neighborhoods", "unitCost": 7056},
+      {"name": "Las Vegas", "dept": "Community Services", "unitCost": 9444},
       {"name": "Los Angeles", "dept": "Housing", "unitCost": 13812},
       {"name": "Oakland", "dept": "Human Services", "unitCost": 21804},
       {"name": "Philadelphia", "dept": "Homeless Services", "unitCost": 9876}
@@ -140,6 +156,9 @@
       {"name": "Baltimore", "dept": "Homeless Services", "unitCost":  null},
       {"name": "Boston", "dept": "Human Services", "unitCost":  null},
       {"name": "Detroit", "dept": "General Services", "unitCost": null},
+      {"name": "Houston", "dept": "Human Services", "unitCost": null},
+      {"name": "Jacksonville", "dept": "Community Services", "unitCost": null},
+      {"name": "Las Vegas", "dept": "Community Services", "unitCost": null},
       {"name": "Los Angeles", "dept": "General Purposes", "unitCost": null},
       {"name": "Oakland", "dept": "Human Services", "unitCost": null},
       {"name": "Philadelphia", "dept": "Homeless Services", "unitCost": null}
@@ -162,6 +181,9 @@
       {"name": "Baltimore", "dept": "Health", "unitCost":  null},
       {"name": "Boston", "dept": "Age Comission", "unitCost":  null},
       {"name": "Detroit", "dept": "Health", "unitCost": null},
+      {"name": "Houston", "dept": "Human Services", "unitCost": null},
+      {"name": "Jacksonville", "dept": "Community Services", "unitCost": null},
+      {"name": "Las Vegas", "dept": "Community Services", "unitCost": null},
       {"name": "Los Angeles", "dept": "Dept. Aging", "unitCost": null},
       {"name": "Oakland", "dept": "Human Services", "unitCost": null},
       {"name": "Philadelphia", "dept": "Human Services", "unitCost": null}

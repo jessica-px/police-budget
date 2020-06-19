@@ -105,6 +105,103 @@
     ]
   },
   {
+    "name": "Houston",
+    "state": "TX",
+    "generalFund": 2717192611,
+    "policeBudget": 899879053,
+    "links": [
+      {
+        "url": "https://www.houstontx.gov/budget/20budadopt/II_GFS.pdf",
+        "linkText": "Fiscal Year 2020 Budget General Fund Summary (PDF)"
+      }
+    ],
+    "notes": [],
+    "departments": [
+      {
+        "name": "Human Services",
+        "budget": 190869558
+      },
+      {
+        "name": "Housing",
+        "budget": 515815
+      },
+      {
+        "name": "Parks and Rec",
+        "budget": 78556551
+      },
+      {
+        "name": "Health",
+        "budget": 58540257
+      },
+      {
+        "name": "Public Works",
+        "budget": 32082600
+      }
+    ]
+  },
+  {
+    "name": "Jacksonville",
+    "state": "FL",
+    "generalFund": 1267982097,
+    "policeBudget": 481594597,
+    "links": [
+      {
+        "url": "https://www.coj.net/departments/finance/docs/budget/city-of-jacksonville-fy19-20-budget.aspx",
+        "linkText": "Annual Budget 2019-2020 (PDF)"
+      }
+    ],
+    "notes": [],
+    "departments": [
+      {
+        "name": "Neighborhoods",
+        "budget": 22309743
+      },
+      {
+        "name": "Public Works",
+        "budget": 48311646
+      },
+      {
+        "name": "Parks and Rec",
+        "budget": 48945827
+      },
+      {
+        "name": "Community Services",
+        "budget": 48945827
+      }
+    ]
+  },
+  {
+    "name": "Las Vegas",
+    "state": "NV",
+    "generalFund": 615822467,
+    "policeBudget": 156836411,
+    "links": [
+      {
+        "url": "budget.lasvegasnevada.gov/#!/year/2020/operating/0/fund/General/0/department",
+        "linkText": "City of Las Vegas Open Budget (PDF)"
+      }
+    ],
+    "notes": [],
+    "departments": [
+      {
+        "name": "Community Services",
+        "budget": 4330869
+      },
+      {
+        "name": "Public Works",
+        "budget": 29838732
+      },
+      {
+        "name": "Parks and Rec",
+        "budget": 22041543
+      },
+      {
+        "name": "Youth Development",
+        "budget": 3002477
+      }
+    ]
+  },
+  {
     "name": "Los Angeles",
     "state": "CA",
     "generalFund": 4471027516,
