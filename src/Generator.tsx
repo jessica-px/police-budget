@@ -15,8 +15,8 @@ const sortedAlternatives = alternatives.sort((a, b) => (a.name > b.name) ? 1 : -
 // -------------------------------------------------------- //
 
 export const Generator = () => {
-  const [city, setCity] = useState<City>(cities[0]);
-  const [alternative, setAlternative] = useState<Alternative>(alternatives[0]);
+  const [city, setCity] = useState<City>(getRandomCity());
+  const [alternative, setAlternative] = useState<Alternative>(getRandomAlt());
 
   return (
     <PageWrapper>
@@ -98,6 +98,9 @@ const BudgetSection = ({name, budget, generalFund, type}: BudgetSectionProps) =>
 // -------------------------------------------------------- //
 //                           Helpers                        //
 // -------------------------------------------------------- //
+
+const getRandomCity = (): City => cities[Math.floor(Math.random()*cities.length)];
+const getRandomAlt = (): Alternative => alternatives[Math.floor(Math.random()*alternatives.length)];
 
 const findPercent = (smallNum: number, bigNum: number): number => {
   const decimal = (smallNum / bigNum);
