@@ -247,6 +247,76 @@
     ]
   },
   {
+    "name": "Louisville",
+    "state": "KY",
+    "generalFund": 685328204,
+    "policeBudget": 187056581,
+    "links": [
+      {
+        "url": "https://louisvilleky.gov/sites/default/files/management_budget/cafr/fy19_cafr_final_fs_12-20-19.pdf",
+        "linkText": "Comprehensive Annual Financial Report 2018-2019 (PDF)"
+      }
+    ],
+    "notes": [],
+    "departments": [
+      {
+        "name": "Community Services",
+        "budget": 9794761
+      },
+      {
+        "name": "Public Works",
+        "budget": 38593642
+      },
+      {
+        "name": "Parks and Rec",
+        "budget": 26771482
+      }
+    ]
+  },
+  {
+    "name": "New York",
+    "state": "NY",
+    "generalFund": 91779218989,
+    "policeBudget": 5668823293,
+    "links": [
+      {
+        "url": "https://comptroller.nyc.gov/wp-content/uploads/2019/10/7-General-Capital-Fund-Detailed-Schedules-of-Revenues-and-Expenditures.pdf",
+        "linkText": "Comprehensive Annual Financial Report 2019 (PDF)"
+      }
+    ],
+    "notes": [],
+    "departments": [
+      {
+        "name": "Parks and Rec",
+        "budget": 447625052
+      },
+      {
+        "name": "Housing",
+        "budget": 1313010941
+      },
+      {
+        "name": "Homeless Services",
+        "budget": 2182751713
+      },
+      {
+        "name": "Mental Hygiene",
+        "budget": 1799298979
+      },
+      {
+        "name": "Dept. for Aging",
+        "budget": 381914092
+      },
+      {
+        "name": "Transportation",
+        "budget": 768960667
+      },
+      {
+        "name": "Youth and Community",
+        "budget": 697619241
+      }
+    ]
+  },
+  {
     "name": "Oakland",
     "state": "CA",
     "generalFund": 655127232,
