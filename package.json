@@ -11,11 +11,18 @@
     "@types/react": "^16.9.36",
     "@types/react-dom": "^16.9.8",
     "@types/react-router-dom": "^5.1.5",
+    "@zendeskgarden/react-dropdowns": "^8.13.0",
+    "@zendeskgarden/react-theming": "^8.13.0",
+    "react-minimal-pie-chart": "^8.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
-    "typescript": "^3.7.5"
+    "typescript": "^3.7.5",
+    "styled-components": "^5.1.1"
+  },
+  "devDependencies": {
+    "@types/styled-components": "^5.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
