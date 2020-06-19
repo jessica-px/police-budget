@@ -71,15 +71,19 @@ const DisclaimterSection = () => (
 const GeneralFundsSection = () => (
   <CollapsibleSection title='General Funds' subSection={false}>
     <Paragraph>
-      Unless otherwise noted, "City Budget", for the purposes of this app, means General Funds.
+      Unless otherwise noted, "city budget", for the purposes of this app, means General Funds.
     </Paragraph>
     <Paragraph>
-      General Funds (also called discretionary funds) is money that can be
-      freely distributed by the mayor and council members without any direct input
-      from the average citizen. It is usually the majority of the city's total budget, and comes primarily from general taxes.
+      General Funds refers to money that the mayor and council members may
+      freely distribute across different departments and services without any direct input
+      from the average citizen. It is usually a very large portion of the city's total budget, and comes primarily from general taxes (property, income, sales, etc.).
     </Paragraph>
     <Paragraph>
-      In every major city in the U.S., police departments are given an enormous percentage of the General Funds money.
+      Note that there are many services which recieve money from both the General Funds and also other sources (specialty taxes, state/federal grants, etc.).
+      The numbers shown here do not tell the entire store of the city's budget -- the focus is only on the General Funds, and what city leaders choose to do with it.
+    </Paragraph>
+    <Paragraph>
+      In most cities in the US, police departments are given an very large cut of the General Funds money.
     </Paragraph>
   </CollapsibleSection>
 )
@@ -87,7 +91,7 @@ const GeneralFundsSection = () => (
 const SalarySection =() => (
   <CollapsibleSection title='Salary Data' subSection={false}>
     <Paragraph>
-      All salary data uses state averages taken from
+      All salary data uses local averages taken from
       the <a href="">U.S. Bureau of Labor Statistics</a>.
       Note that this does not include any additional costs paid for
       by the employer, such as employee benefits.
