@@ -79,7 +79,7 @@ const GeneralFundsSection = () => (
       from the average citizen. It is usually a very large portion of the city's total budget, and comes primarily from general taxes (property, income, sales, etc.).
     </Paragraph>
     <Paragraph>
-      Note that there are many services which recieve money from both the General Funds and also other sources (specialty taxes, state/federal grants, etc.).
+      Note that there are many services which receive money from both the General Funds and also other sources (specialty taxes, state/federal grants, etc.).
       The numbers shown here do not tell the entire story of the city's budget -- the focus is only on the General Funds, and what city leaders choose to do with it.
     </Paragraph>
     <Paragraph>
