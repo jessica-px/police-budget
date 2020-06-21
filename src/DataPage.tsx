@@ -1,9 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styled, { css } from 'styled-components'
 import { Link } from "react-router-dom";
 import { City, Alternative, DataLink, CityData } from 'Types';
 import cities from 'cities.json';
 import alternatives from 'alternatives.json';
+
+declare var woopra: any; // recognize the "woopra" global
+
 
 // -------------------------------------------------------- //
 //                          Helpers                         //
@@ -33,23 +36,32 @@ const formatter = new Intl.NumberFormat('en-US', {
 // -------------------------------------------------------- //
 
 
-export const DataPage = () => (
-  <PageWrapper>
-    <div>
-      <PageTitle>About the Data</PageTitle>
-      <DisclaimterSection />
-      <GeneralFundsSection />
-      <PageTitle>Sources</PageTitle>
-      <CitySection />
-      <RentSection />
-      <SalarySection />
-      <OtherDataSection />
-    </div>
-    <GoBackLinkWapper>
-      <GoBackLink to='/'><BackArrow/> Back to Main Page</GoBackLink>
-    </GoBackLinkWapper>
-  </PageWrapper>
-)
+export const DataPage = () => {
+  // Track "page" view on first load
+  useEffect(() => {
+    woopra.track('view page', {
+      title: 'data and sources'
+    })
+  }, [])
+
+  return (
+    <PageWrapper>
+      <div>
+        <PageTitle>About the Data</PageTitle>
+        <DisclaimterSection />
+        <GeneralFundsSection />
+        <PageTitle>Sources</PageTitle>
+        <CitySection />
+        <RentSection />
+        <SalarySection />
+        <OtherDataSection />
+      </div>
+      <GoBackLinkWapper>
+        <GoBackLink to='/'><BackArrow/> Back to Main Page</GoBackLink>
+      </GoBackLinkWapper>
+    </PageWrapper>
+  )
+}
 
 
 // -------------------------------------------------------- //

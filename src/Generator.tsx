@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styled, { css } from 'styled-components'
 import { Link } from "react-router-dom";
 import { Chart } from 'Chart';
@@ -10,6 +10,8 @@ import alternatives from 'alternatives.json';
 const sortedCities = cities.sort((a, b) => (a.name > b.name) ? 1 : -1);
 const sortedAlternatives = alternatives.sort((a, b) => (a.name > b.name) ? 1 : -1);
 
+declare var woopra: any; // recognize the "woopra" global
+
 // -------------------------------------------------------- //
 //                       Main Component                     //
 // -------------------------------------------------------- //
@@ -18,13 +20,36 @@ export const Generator = () => {
   const [city, setCity] = useState<City>(getRandomCity());
   const [alternative, setAlternative] = useState<Alternative>(getRandomAlt());
 
+  // Track "page" view on first load
+  useEffect(() => {
+    woopra.track('view page', {
+      title: 'generator'
+    })
+  }, [])
+
+  const setCityData = (newCity: City) => {
+    setCity(newCity);
+    woopra.track('set city', {
+      name: newCity.name,
+      alternative: alternative.name
+    })
+  }
+
+  const setAlternativeData = (newAlt: Alternative) => {
+    setAlternative(newAlt);
+    woopra.track('set alternative', {
+      name: newAlt.name,
+      city: city.name
+    })
+  }
+
   return (
     <PageWrapper>
       <HeadlineWrapper>
         With 50% of the <CityDropdown
                           city={city}
                           allCities={sortedCities}
-                          setCity={setCity}
+                          setCity={setCityData}
                          /><br/>
         <HeadlinePolice> police budget</HeadlinePolice>, we could pay for
       </HeadlineWrapper>
@@ -32,7 +57,7 @@ export const Generator = () => {
       <AlternativeDropdown
         currAlt={alternative}
         allAlternatives={sortedAlternatives}
-        setAlternative={setAlternative}
+        setAlternative={setAlternativeData}
       />
       <CenteredText>
         Instead, city spending looks like this:
