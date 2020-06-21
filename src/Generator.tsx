@@ -30,7 +30,7 @@ export const Generator = () => {
   const setCityData = (newCity: City) => {
     setCity(newCity);
     woopra.track('set city', {
-      name: newCity.name,
+      cityName: newCity.name,
       alternative: alternative.name
     })
   }
@@ -38,7 +38,7 @@ export const Generator = () => {
   const setAlternativeData = (newAlt: Alternative) => {
     setAlternative(newAlt);
     woopra.track('set alternative', {
-      name: newAlt.name,
+      altName: newAlt.name,
       city: city.name
     })
   }
