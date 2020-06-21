@@ -95,7 +95,7 @@ const GeneralFundsSection = () => (
       The numbers shown here do not tell the entire story of the city's budget -- the focus is only on the General Funds, and what city leaders choose to do with it.
     </Paragraph>
     <Paragraph>
-      In most cities in the US, police departments are given an very large cut of the General Funds money.
+      In most cities in the US, police departments are given a very large cut of the General Funds money.
     </Paragraph>
   </CollapsibleSection>
 )
